@@ -45,6 +45,10 @@
         .num { background: rgba(245, 158, 11, 0.15); color: #d97706; padding: 4px 12px; border-radius: 8px; font-size: 18px; }
         .section-card p { color: #475569; font-size: 15px; margin-bottom: 12px; }
 
+        /* Business Profile Button Style */
+        .btn-gmb { background: #4285F4; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3); margin-top: 10px; }
+        .btn-gmb:hover { background: #3367d6; }
+
         /* Floating Buttons */
         .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 999; text-decoration: none; }
         .call-float { position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); z-index: 999; text-decoration: none; }
@@ -143,23 +147,15 @@
             <p>خدمات **معلم بلاط** ورخام لتركيب واجهات الرخام ميكانيكياً بالمسامير الفولاذية لضمان الأمان، وتثبيت درج الرخام بجميع أنواعه مع مانع الانزلاق بالرياض.</p>
         </div>
 
-        <!-- بداية قسم خريطة النشاط التجاري -->
-        <div class="section-card">
-            <h2><span class="num"><i class="fa-solid fa-location-dot"></i></span> موقعنا على الخريطة</h2>
-            <p>يمكنكم زيارتنا أو الوصول إلى موقعنا في الرياض عبر الخريطة التفاعلية التالية:</p>
-            <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-top: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.5!2d46.6698!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0x82ed63f6832014fb!2z2YXYudmE2YUg2LHYrtin2YUg2YjYqNmE2KfYtw!5e0!3m2!1sar!2ssa!4v1710000000000!5m2!1sar!2ssa" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <!-- بداية قسم رابط النشاط التجاري على جوجل -->
+        <div class="section-card" style="text-align: center;">
+            <h2><i class="fa-brands fa-google" style="color: #4285F4;"></i> نشاطنا التجاري على خرائط جوجل</h2>
+            <p>يمكنكم الاطلاع على آراء وتقييمات عملائنا أو التواصل معنا عبر صفحة نشاطنا التجاري المعتمدة:</p>
+            <a href="https://maps.app.goo.gl/kAKAdhHBxaub8h9g8" target="_blank" class="btn-gmb">
+                <i class="fa-solid fa-store"></i> زيارة نشاطنا على جوجل ماب
+            </a>
         </div>
-        <!-- نهاية قسم خريطة النشاط التجاري -->
+        <!-- نهاية قسم رابط النشاط التجاري -->
     </main>
 
     <footer>
