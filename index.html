@@ -54,6 +54,12 @@
         .num { background: rgba(245, 158, 11, 0.15); color: #d97706; padding: 4px 12px; border-radius: 8px; font-size: 18px; }
         .section-card p { color: #475569; font-size: 15px; margin-bottom: 12px; }
 
+        /* Gallery Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+        .gallery-item { border-radius: 12px; overflow: hidden; border: 2px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-5px); border-color: #fbbf24; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+
         /* Business Profile Button */
         .btn-gmb { background: #4285F4; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3); margin-top: 10px; }
         .btn-gmb:hover { background: #3367d6; }
@@ -104,6 +110,21 @@
     </section>
 
     <main class="container">
+        <!-- قسم معرض الأعمال والتطبيقات -->
+        <div class="section-card">
+            <h2><i class="fa-solid fa-images" style="color: #f59e0b;"></i> معرض أعمالنا وسابقة المشاريع</h2>
+            <p>جانب من أعمال تركيب الرخام والتفصيل والبورسلان بتشطيبات عالية الجودة:</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="./w1.png" alt="تفصيل رخام بالرياض 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w2.png" alt="تركيب سيراميك وبورسلان 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w3.png" alt="معلم رخام الرياض 3" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w4.png" alt="تفصيل مغاسل رخام 4" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w5.png" alt="تركيب درج رخام 5" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w6.jpg" alt="تركيب أرضيات رخام 6" loading="lazy"></div>
+                <div class="gallery-item"><img src="./w7.jpg" alt="أعمال رخام ومسابح 7" loading="lazy"></div>
+            </div>
+        </div>
+
         <!-- القسم الأول: الرخام والدرج -->
         <div class="section-card">
             <h2><span class="num">01</span> تصميم وتفصيل كافة أعمال الرخام (مغاسل، طاولات، كاونترات، درج، وأرضيات)</h2>
@@ -179,7 +200,7 @@
             <p style="margin-top: 10px;"><strong>كم سعر خدمة تركيب رخام الرياض التي توفرونها؟</strong><br>تختلف اسعار خدمات تركيب رخام الرياض وفقاً لعدة عناصر منها قرب المسافة وحجم العمل وتوقيته وهل هو عمل مستعجل أم لا.</p>
             <p style="margin-top: 10px;"><strong>هل تركيب رخام الرياض ذو ثقة في السندال للرخام؟</strong><br>نعم تركيب رخام الرياض في السندال للرخام ذو ثقة في التعامل فكل الفنيين والشركات يتم تقييمهم من عملاء حقيقيين وهذا يدل على جودة الخدمة.</p>
             <p style="margin-top: 10px;"><strong>كيف ابحث عن تركيب رخام الرياض في موقعكم؟</strong><br>يُمكنك البحث عن تركيب رخام الرياض في موقعنا من خلال تحديد المنطقة ثم تحديد المهنة وإختيار الفني الأقرب إليك والأفضل تقييماً فموقعنا يعتمد على تقييم الفنيين والشركات من خلال العملاء بعد كل زيارة لهم.</p>
-            <p style="margin-top: 10px;"><strong>هل يحصل الموقع على أي عمولة من العملاء لتوفير تركيب رخام الرياض ؟</strong><br>لا يحصل موقعنا على أي عمولة من العملاء مُقابل توفير تركيب رخام الرياض والفنيين والشركات لخدمتكم.</p>
+            <p style="margin-top: 10px;"><strong>هل يحصل الموقع على أي عمولة من العملاء لتوفير تركيب رخام الرياض ؟</strong><br>لا يحصل موقعنا على أي عمولة من العملاء مُ مقابل توفير تركيب رخام الرياض والفنيين والشركات لخدمتكم.</p>
 
             <p style="margin-top: 20px; font-weight: bold;">أضف خدماتك</p>
             <p>السندال للرخام.. موقع متخصص في عرض وتقديم خدمات أصحاب المهن والفنيين والصنايعية من سباك ونجار ودهان وكل أنواع المهن الحرة والصنايعية</p>
