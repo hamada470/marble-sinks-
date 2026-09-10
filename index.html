@@ -265,10 +265,11 @@
 
     <!-- نافذة وزر محادثة الواتساب العائم التفاعلي -->
     <button class="wa-float-btn" id="waFloatBtn" onclick="toggleWaChat()" aria-label="WhatsApp Chat">
-        <i class="fa-brands fa-whatsapp" id="waIcon"></i>
+        <i class="fa-solid fa-xmark" id="waIcon"></i>
     </button>
 
-    <div class="wa-chat-popup" id="waChatPopup">
+    <!-- تم إضافة كلاس active ليظهر الشات تلقائياً عند الدخول -->
+    <div class="wa-chat-popup active" id="waChatPopup">
         <div class="wa-popup-header">
             <div class="wa-header-info">
                 <div class="wa-header-icon"><i class="fa-brands fa-whatsapp"></i></div>
@@ -300,6 +301,19 @@
 
     <script>
         const phoneNumber = "966569629485"; // رقم الواتساب الخاص بك
+
+        // فتح المحادثة تلقائياً عند تحميل الصفحة
+        window.addEventListener('DOMContentLoaded', () => {
+            // يمكن جعلها تظهر بعد ثانية واحدة لإعطاء تأثير حركي لطيف للزائر
+            setTimeout(() => {
+                const popup = document.getElementById('waChatPopup');
+                const icon = document.getElementById('waIcon');
+                if(!popup.classList.contains('active')){
+                    popup.classList.add('active');
+                    icon.className = "fa-solid fa-xmark";
+                }
+            }, 1000);
+        });
 
         function toggleWaChat() {
             const popup = document.getElementById('waChatPopup');
