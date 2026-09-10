@@ -70,9 +70,33 @@
         .btn-more-services { background: #0f172a; color: #fbbf24; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; border: 1px solid #f59e0b; }
 
         /* Floating Buttons */
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 999; text-decoration: none; }
         .call-float { position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); z-index: 999; text-decoration: none; }
         
+        /* Floating WhatsApp Chat Popup Window */
+        .wa-float-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; cursor: pointer; transition: transform 0.3s ease; border: none; }
+        .wa-float-btn:hover { transform: scale(1.08); }
+        .wa-chat-popup { display: none; position: fixed; bottom: 90px; right: 20px; width: 330px; max-width: calc(100vw - 40px); background: #1c221e; color: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); font-family: 'Tajawal', sans-serif; }
+        .wa-chat-popup.active { display: block; animation: popupSlideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popupSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .wa-popup-header { background: #2d3831; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .wa-header-info { display: flex; align-items: center; gap: 10px; }
+        .wa-header-icon { width: 35px; height: 35px; background: #128c7e; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .wa-header-text { font-size: 13px; }
+        .wa-header-title { font-weight: bold; color: #fff; line-height: 1.2; }
+        .wa-header-status { font-size: 11px; color: #25d366; display: flex; align-items: center; gap: 5px; }
+        .wa-status-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; }
+        .wa-close-btn { color: #8a9990; font-size: 16px; cursor: pointer; background: none; border: none; }
+        .wa-popup-body { padding: 15px; background: #121614; display: flex; flex-direction: column; gap: 10px; }
+        .wa-msg-box { background: #222d27; border-radius: 12px; padding: 12px; font-size: 13px; color: #e1e7e4; line-height: 1.5; border: 1px solid rgba(255,255,255,0.05); }
+        .wa-quick-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; margin-top: 5px; }
+        .wa-quick-btn { background: #222d27; color: #c3d1c9; border: 1px solid #324239; padding: 8px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.2s; text-align: right; font-family: 'Tajawal', sans-serif; }
+        .wa-quick-btn:hover { background: #2c3a32; color: #fff; border-color: #25d366; }
+        .wa-popup-footer { padding: 10px 12px; background: #1c221e; display: flex; align-items: center; gap: 8px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .wa-input-box { flex: 1; background: #0f1311; border: 1px solid #2b3630; border-radius: 20px; padding: 8px 14px; color: #fff; font-size: 13px; outline: none; font-family: 'Tajawal', sans-serif; }
+        .wa-send-btn { background: #25d366; color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 15px; }
+        .wa-direct-call { text-align: center; padding: 8px; font-size: 12px; color: #8a9990; border-top: 1px solid rgba(255,255,255,0.05); background: #171d19; }
+        .wa-direct-call a { color: #facc15; text-decoration: none; font-weight: bold; }
+
         /* Footer */
         footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 25px; margin-top: 50px; font-size: 14px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .footer-logo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24; background: #fff; padding: 2px; }
@@ -236,8 +260,82 @@
         <p>معلم رخام السندال للرخام والسيراميك | معلم تركيب رخام وسيراميك بالرياض | تركيب درج وتفصيل مغاسل رخام ومغاسل مودرن وتركيب بورسلان | اتصل الآن: 0569629485</p>
     </footer>
 
-    <a href="https://wa.me/966569629485" class="whatsapp-float" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- زر الهاتف العائم -->
     <a href="tel:0569629485" class="call-float" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+    <!-- نافذة وزر محادثة الواتساب العائم التفاعلي -->
+    <button class="wa-float-btn" id="waFloatBtn" onclick="toggleWaChat()" aria-label="WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp" id="waIcon"></i>
+    </button>
+
+    <div class="wa-chat-popup" id="waChatPopup">
+        <div class="wa-popup-header">
+            <div class="wa-header-info">
+                <div class="wa-header-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="wa-header-text">
+                    <div class="wa-header-title">محادثة مباشرة – واتساب</div>
+                    <div class="wa-header-status"><span class="wa-status-dot"></span> متصلون الآن - رد خلال دقائق</div>
+                </div>
+            </div>
+            <button class="wa-close-btn" onclick="toggleWaChat()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="wa-popup-body">
+            <div class="wa-msg-box">
+                أهلاً وسهلاً بك في السندال للرخام والسيراميك. نركّب سيراميك ورخام ومغاسل رخام بإتقان وضمان. اكتب استفسارك وسنرد عليك على واتساب خلال دقائق.
+            </div>
+            <div class="wa-quick-options">
+                <button class="wa-quick-btn" onclick="sendWaPreset('أريد معاينة وقياس مجاني')">أريد معاينة وقياس مجاني</button>
+                <button class="wa-quick-btn" onclick="sendWaPreset('استفسار عن أسعار تركيب السيراميك')">استفسار عن أسعار تركيب السيراميك</button>
+                <button class="wa-quick-btn" onclick="sendWaPreset('أريد تفصيل مغسلة رخام')">أريد تفصيل مغسلة رخام</button>
+            </div>
+        </div>
+        <div class="wa-popup-footer">
+            <input type="text" id="waCustomMsg" class="wa-input-box" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+            <button class="wa-send-btn" onclick="sendWaCustom()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+        <div class="wa-direct-call">
+            أو اتصل مباشرة: <a href="tel:0569629485">0569629485</a>
+        </div>
+    </div>
+
+    <script>
+        const phoneNumber = "966569629485"; // رقم الواتساب الخاص بك
+
+        function toggleWaChat() {
+            const popup = document.getElementById('waChatPopup');
+            const icon = document.getElementById('waIcon');
+            popup.classList.toggle('active');
+            
+            if(popup.classList.contains('active')) {
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                icon.className = "fa-brands fa-whatsapp";
+            }
+        }
+
+        function sendWaPreset(text) {
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function sendWaCustom() {
+            const input = document.getElementById('waCustomMsg');
+            const text = input.value.trim();
+            if(text !== "") {
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank');
+                input.value = "";
+            } else {
+                sendWaPreset("السلام عليكم، أريد الاستفسار عن خدماتكم");
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendWaCustom();
+            }
+        }
+    </script>
 
 </body>
 </html>
