@@ -1,640 +1,494 @@
-import os
-
-html_code = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معلم رخام وسيراميك بالرياض | تفصيل مغاسل رخام مودرن 0574688407</title>
-    <meta name="description" content="أفضل معلم رخام وسيراميك وترکیب أرضيات وجدران بالرياض. تخصص تفصيل مغاسل رخام مودرن، رخام طبيعي وصناعي، وتركيب بورسلين. اتصل بنا: 0574688407">
-    <meta name="keywords" content="معلم رخام بالرياض, تفصيل مغاسل رخام, معلم سيراميك الرياض, تركيب رخام وبورسلين, مغاسل رخام مودرن, تركيب رخام ميكانيكي">
-    <link rel="canonical" href="https://mo3lem-ceramic.com/">
-    
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "معلم رخام وسيراميك الرياض",
-      "image": "https://mo3lem-ceramic.com/assets/img/logo.jpg",
-      "@id": "https://mo3lem-ceramic.com/",
-      "url": "https://mo3lem-ceramic.com/",
-      "telephone": "+966574688407",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "طريق الملك فهد",
-        "addressLocality": "الرياض",
-        "addressRegion": "منطقة الرياض",
-        "postalCode": "12345",
-        "addressCountry": "SA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 24.7136,
-        "longitude": 46.6753
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "07:00",
-        "closes": "22:00"
-      },
-      "sameAs": [
-        "https://www.google.com/maps?q=Riyadh"
-      ]
-    }
-    </script>
-
-    <!-- Google Tag / Analytics placeholder -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18421209027"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'AW-18421209027');
     </script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلم رخام بالرياض | تفصيل مغاسل رخام مودرن وتركيب رخام وسيراميك</title>
+    <meta name="description" content="أفضل معلم رخام وتفصيل مغاسل رخام بالرياض. متخصصون في تفصيل مغاسل رخام مودرن، تركيب سيراميك وبورسلين، تفصيل مغاسل طبيعي وصناعي، وتركيب الدرج والواجهات. اتصل الآن: 0574688407">
+    <meta name="keywords" content="معلم رخام, معلم رخام بالرياض, معلم تركيب رخام, تركيب الرخام, معلم سيراميك بالرياض, تركيب سيراميك, تفصيل مغاسل, تفصيل مغاسل رخام, تفصيل مغاسل الرخام بالرياض, مغاسل رخام, مغاسل الرخام بالرياض, مغاسل رخام مودرن, مغاسل مودرن, السندال للرخام, تفصيل مغاسل رخام صناعي, تفصيل مغاسل رخام طبيعي, تفصيل طاولات رخام, مدافئ رخام, كاونترات رخام مطابخ, تركيب أرضيات رخام, معلم رخام شمال الرياض, معلم رخام شرق الرياض, معلم رخام جنوب الرياض, معلم رخام غرب الرياض, رخام كلكتا, رخام امبرادور, كريم مارفل, جلي وتلميع رخام, تفصيل مغاسل رخام مخفية, تركيب رخام ميكانيكي بالرياض, رخام ستاتواريو">
+    
+    <link rel="icon" href="w5.png" type="image/png">
+    <link rel="shortcut icon" href="w5.png" type="image/png">
+    <link rel="apple-touch-icon" href="w5.png">
+    <meta property="og:site_name" content="السندال لتفصيل مغاسل وتركيب الرخام والسيراميك">
+    <meta property="og:title" content="معلم رخام بالرياض | تفصيل مغاسل رخام مودرن وتركيب رخام وسيراميك">
+    <meta property="og:image" content="w5.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #d97706;
-            --dark: #1f2937;
-            --light: #f8fafc;
-            --accent: #3b82f6;
-            --gray: #64748b;
-            --border: #e2e8f0;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Tajawal', sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.8;
-        }
-        header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .top-bar {
-            background: var(--primary);
-            color: #fff;
-            padding: 8px 0;
-            font-size: 14px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .top-bar-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: 900;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-            align-items: center;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-        .cta-btn {
-            background: var(--secondary);
-            color: #fff;
-            padding: 10px 22px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
-            transition: transform 0.2s, background 0.2s;
-        }
-        .cta-btn:hover {
-            background: #b45309;
-            transform: translateY(-2px);
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; direction: rtl; text-align: right; line-height: 1.8; }
         
+        /* Header */
+        header { background: #0f172a; color: #fff; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #f59e0b; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24; background: #fff; padding: 2px; }
+        .logo { font-size: 20px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 10px; }
+        .btn-call-head { background: #facc15; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3); transition: 0.3s; }
+        .btn-call-head:hover { background: #eab308; }
+
         /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            color: #fff;
-            padding: 180px 0 100px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            color: #f8fafc;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin: 0 auto 35px;
-            color: #cbd5e1;
-        }
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 10px 22px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-        }
-        .btn-outline:hover {
-            background: #fff;
-            color: var(--primary);
-        }
+        .hero { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; padding: 60px 20px; text-align: center; }
+        .badge { background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin-bottom: 15px; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .hero h1 { font-size: 28px; font-weight: 900; margin-bottom: 15px; color: #fff; }
+        .hero h1 span { color: #fbbf24; }
+        .hero p { font-size: 16px; color: #cbd5e1; max-width: 800px; margin: 0 auto 25px; }
+        .hero-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn-wa { background: #25D366; color: #fff; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-wa:hover { background: #1ebc57; }
+        .btn-ph { background: #facc15; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-ph:hover { background: #eab308; }
 
-        /* Main Content Layout */
-        section {
-            padding: 70px 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-title h2 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-        .section-title p {
-            color: var(--gray);
-            margin-top: 10px;
-            font-size: 16px;
-        }
+        /* Main Content & Sections */
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .section-card { background: #fff; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .section-card h2 { font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 15px; border-bottom: 2px solid #f8fafc; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .num { background: rgba(245, 158, 11, 0.15); color: #d97706; padding: 4px 12px; border-radius: 8px; font-size: 18px; }
+        .section-card p { color: #475569; font-size: 15px; margin-bottom: 12px; }
 
-        /* Guide / Explanatory Blocks (وسائل وشروح توضيحية) */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
-            border: 1px solid var(--border);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card-icon {
-            font-size: 36px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        .card p {
-            color: var(--gray);
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-        .info-badge {
-            background: #eff6ff;
-            color: var(--accent);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            display: inline-block;
-        }
+        /* Articles Styling */
+        .article-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-top: 20px; margin-bottom: 25px; }
+        .article-card h3 { font-size: 19px; font-weight: 800; color: #0f172a; margin-bottom: 12px; border-right: 4px solid #f59e0b; padding-right: 10px; }
+        .article-card p { color: #334155; font-size: 15px; line-height: 1.85; margin-bottom: 10px; }
+        .article-card ul { margin-right: 20px; margin-bottom: 15px; color: #334155; }
+        .article-card ul li { margin-bottom: 8px; }
 
-        /* Comparison Table Section */
-        .comparison-wrapper {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid var(--border);
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            text-align: right;
-        }
-        th, td {
-            padding: 15px;
-            border-bottom: 1px solid var(--border);
-        }
-        th {
-            background: var(--primary);
-            color: #fff;
-            font-weight: 700;
-        }
-        tr:nth-child(even) {
-            background: #f8fafc;
-        }
+        /* Single Section Image Styling */
+        .section-main-img { width: 100%; max-height: 350px; object-fit: contain; border-radius: 12px; margin: 15px 0; background: #f8fafc; padding: 10px; border: 1px solid #e2e8f0; }
 
-        /* Steps Section */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-        .step-box {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            border-top: 4px solid var(--secondary);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
-        }
-        .step-num {
-            width: 45px;
-            height: 45px;
-            background: var(--secondary);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-weight: 900;
-            font-size: 18px;
-        }
-        .step-box h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-        .step-box p {
-            font-size: 14px;
-            color: var(--gray);
-        }
+        /* Gallery Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.3s ease; }
+        .gallery-img:hover { transform: scale(1.02); }
 
-        /* FAQ Section */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            background: #fff;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 20px;
-            font-weight: 700;
-            font-size: 17px;
-            color: var(--primary);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-        .faq-answer {
-            padding: 0 20px 20px;
-            color: var(--gray);
-            font-size: 15px;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 15px;
-        }
+        /* Business Profile Button */
+        .btn-gmb { background: #4285F4; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3); margin-top: 10px; }
+        .btn-gmb:hover { background: #3367d6; }
+
+        /* Link to Sub-page */
+        .btn-more-services { background: #0f172a; color: #fbbf24; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; border: 1px solid #f59e0b; transition: 0.3s; }
+        .btn-more-services:hover { background: #1e293b; }
+
+        /* Floating Phone Button */
+        .call-float { position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); z-index: 999; text-decoration: none; transition: transform 0.3s ease; }
+        .call-float:hover { transform: scale(1.08); }
+
+        /* Floating WhatsApp Popup Window */
+        .wa-float-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; cursor: pointer; transition: transform 0.3s ease; border: none; }
+        .wa-float-btn:hover { transform: scale(1.08); }
+        .wa-chat-popup { display: none; position: fixed; bottom: 90px; right: 20px; width: 330px; max-width: calc(100vw - 40px); background: #1c221e; color: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); font-family: 'Tajawal', sans-serif; }
+        .wa-chat-popup.active { display: block; animation: popupSlideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popupSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .wa-popup-header { background: #2d3831; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .wa-header-info { display: flex; align-items: center; gap: 10px; }
+        .wa-header-icon { width: 35px; height: 35px; background: #128c7e; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .wa-header-text { font-size: 13px; }
+        .wa-header-title { font-weight: bold; color: #fff; line-height: 1.2; }
+        .wa-header-status { font-size: 11px; color: #25d366; display: flex; align-items: center; gap: 5px; }
+        .wa-status-dot { width: 7px; height: 7px; background: #25d366; border-radius: 50%; display: inline-block; }
+        .wa-close-btn { color: #8a9990; font-size: 16px; cursor: pointer; background: none; border: none; }
+        .wa-popup-body { padding: 15px; background: #121614; display: flex; flex-direction: column; gap: 10px; }
+        .wa-msg-box { background: #222d27; border-radius: 12px; padding: 12px; font-size: 13px; color: #e1e7e4; line-height: 1.5; border: 1px solid rgba(255,255,255,0.05); }
+        .wa-quick-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; margin-top: 5px; }
+        .wa-quick-btn { background: #222d27; color: #c3d1c9; border: 1px solid #324239; padding: 8px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.2s; text-align: right; font-family: 'Tajawal', sans-serif; width: 100%; }
+        .wa-quick-btn:hover { background: #2c3a32; color: #fff; border-color: #25d366; }
+        .wa-popup-footer { padding: 10px 12px; background: #1c221e; display: flex; align-items: center; gap: 8px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .wa-input-box { flex: 1; background: #0f1311; border: 1px solid #2b3630; border-radius: 20px; padding: 8px 14px; color: #fff; font-size: 13px; outline: none; font-family: 'Tajawal', sans-serif; }
+        .wa-send-btn { background: #25d366; color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 15px; }
+        .wa-direct-call { text-align: center; padding: 8px; font-size: 12px; color: #8a9990; border-top: 1px solid rgba(255,255,255,0.05); background: #171d19; }
+        .wa-direct-call a { color: #facc15; text-decoration: none; font-weight: bold; }
 
         /* Footer */
-        footer {
-            background: #0f172a;
-            color: #cbd5e1;
-            padding: 50px 0 20px;
-            text-align: center;
-        }
-        footer p {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #64748b;
-        }
-
-        /* Floating Contact Buttons */
-        .float-btns {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 999;
-        }
-        .float-btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 26px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-            text-decoration: none;
-        }
-        .float-btn:hover {
-            transform: scale(1.1);
-        }
-        .whatsapp-float {
-            background: #25d366;
-        }
-        .phone-float {
-            background: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 30px;
-            }
-        }
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 25px; margin-top: 50px; font-size: 14px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .footer-logo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24; background: #fff; padding: 2px; }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "السندال لتفصيل مغاسل وتركيب الرخام والسيراميك",
+      "alternateName": ["معلم رخام بالرياض", "معلم تفصيل مغاسل رخام", "فني تركيب رخام بالرياض", "معلم سيراميك بالرياض"],
+      "image": "w5.png",
+      "@id": "https://m-ceramic.com",
+      "url": "https://m-ceramic.com",
+      "hasMap": "https://maps.app.goo.gl/WmAer7QcoWxrnE9S9?g_st=ac",
+      "sameAs": [
+        "https://maps.app.goo.gl/WmAer7QcoWxrnE9S9?g_st=ac"
+      ],
+      "telephone": "0574688407",
+      "priceRange": "$$",
+      "description": "أفضل معلم رخام وسيراميك بالرياض متخصص في تفصيل مغاسل رخام مودرن، تفصيل مغاسل طبيعي وصناعي، تركيب سيراميك وبورسلين، وتركيب رخام الأرضيات والجدران والواجهات.",
+      "currenciesAccepted": "SAR",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressCountry": "SA"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "الرياض"
+      },
+      "provider": {
+        "@type": "Person",
+        "name": "معلم رخام ورخام السندال"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "كيف يمكنني حجز أفضل معلم رخام وسيراميك بالرياض لتفصيل مغاسل الرخام؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "يمكنك التواصل المباشر عبر الهاتف أو الواتساب على الرقم 0574688407 لطلب معاينة مجانية داخل مدينة الرياض، حيث نقوم برفع المقاسات بالليزر واختيار أفضل عينات الرخام الطبيعي أو الصناعي المناسبة لمشروعك."
+        }
+      },{
+        "@type": "Question",
+        "name": "ما هي ميزات تفصيل مغاسل رخام مودرن مقارنة بالمغاسل الجاهزة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تفصيل مغاسل الرخام المودرن يمنحك حرية اختيار المقاس الدقيق بالمليمتر، وتحديد شكل حوض التصريف المخفي، وتكامل الإضاءة المخفية LED، واستخدام خامات رخام طبيعية وصناعية فائقة المتانة والعزل المائي."
+        }
+      },{
+        "@type": "Question",
+        "name": "ما الفرق بين تفصيل مغاسل الرخام الطبيعي والرخام الصناعي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الرخام الطبيعي يمنح فخامة لا تضاهى وتصاميم عروق فريدة مثل الكلكتا والستاتواريو، بينما يتميز الرخام الصناعي المقاوم بالصلابة وعدم وجود مسام تمتص السوائل والزيوت وسهولة التنظيف والصيانة."
+        }
+      },{
+        "@type": "Question",
+        "name": "كيف يتم حساب تكلفة وأسعار تفصيل مغاسل الرخام بالرياض؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تعتمد التكلفة على نوع الرخام المختار (طبيعي أو صناعي)، طول المغسلة بالسنتمتر، عدد الأحواض، تعقيد التصميم المودرن، ونوع العازل والمستلزمات المخفية المستخدمة في التركيب."
+        }
+      },{
+        "@type": "Question",
+        "name": "ما هي التقنيات المستخدمة في تركيب الرخام والدرج والسيراميك بالرياض؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نستخدم تقنيات التركيب الميكانيكي للواجهات والجدران لضمان الأمان التام، والتركيب بالخلطة الخاصة والإيبوكسي المقوى للأرضيات والدرج مع القص بواسطة الجيت المائي وعازل حماية الرخام."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
 
-    <!-- Header & Navigation with Links -->
     <header>
-        <div class="top-bar">
-            <div class="container top-bar-flex">
-                <div><i class="fa fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</div>
-                <div><i class="fa fa-phone"></i> خدمة العملاء: <a href="tel:0574688407" style="color: #fff; text-decoration: none; font-weight: bold;">0574688407</a></div>
+        <div class="logo-container">
+            <img src="w5.png" alt="السندال لتفصيل مغاسل وتركيب الرخام" class="logo-img">
+            <div class="logo">
+                <span>مقاول رخام وتفصيل مغاسل وسيراميك</span>
             </div>
         </div>
-        <div class="container navbar">
-            <a href="#" class="logo"><i class="fa fa-gem" style="color: var(--secondary);"></i> السندال للرخام</a>
-            <ul class="nav-links">
-                <li><a href="#services">الخدمات الرئيسية</a></li>
-                <li><a href="#washbasins">مغاسل الرخام</a></li>
-                <li><a href="#guide">شرح وتوجيهات</a></li>
-                <li><a href="#comparison">مقارنة المواد</a></li>
-                <li><a href="#steps">خطوات العمل</a></li>
-                <li><a href="#faq">الأسئلة الشائعة</a></li>
-            </ul>
-            <a href="https://wa.me/966574688407" class="cta-btn"><i class="fab fa-whatsapp"></i> اطلب استشارة</a>
-        </div>
+        <a href="tel:0574688407" class="btn-call-head"><i class="fa-solid fa-phone"></i> 0574688407</a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>أفضل معلم رخام وسيراميك وتفصيل مغاسل مودرن بالرياض</h1>
-            <p>نقدم خدمات احترافية متكاملة في تركيب الرخام الطبيعي والصناعي، السيراميك، البورسلين، وتصميم وتفصيل مغاسل الرخام الفاخرة بأحدث تقنيات الليزر في الرياض.</p>
-            <div class="hero-btns">
-                <a href="tel:0574688407" class="cta-btn"><i class="fa fa-phone"></i> اتصال مباشر 0574688407</a>
-                <a href="https://wa.me/966574688407" class="btn-outline"><i class="fab fa-whatsapp"></i> واتساب فوري</a>
-            </div>
+        <span class="badge">⭐ معلم رخام ومعلم سيراميك وتفصيل مغاسل بالرياض</span>
+        <h1>أفضل معلم رخام ومعلم تركيب رخام وسيراميك بالرياض <br><span>تفصيل مغاسل رخام مودرن وتفصيل مغاسل طبيعي وصناعي وتركيب الدرج</span></h1>
+        <p>نقدم خدمات متكاملة بصفتنا أفضل <strong>معلم رخام</strong>، <strong>معلم رخام بالرياض</strong>، <strong>معلم سيراميك بالرياض</strong>، و<strong>معلم تركيب رخام بالرياض</strong>. متخصصون في <strong>تفصيل مغاسل رخام</strong>، <strong>تفصيل مغاسل</strong>، <strong>مغاسل رخام</strong>، وتصميم <strong>مغاسل رخام مودرن</strong>، بالإضافة إلى <strong>تركيب الرخام بالسيراميك</strong> للأرضيات والواجهات وتفصيل درج الرخام وكاونترات المطابخ والمدافئ وجلي وتلميع الرخام بجودة عالية.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/966574688407" target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="fa-brands fa-whatsapp"></i> واتساب مباشر</a>
+            <a href="tel:0574688407" class="btn-ph"><i class="fa-solid fa-phone"></i> اتصل بنا الآن</a>
         </div>
     </section>
 
-    <!-- Section 01: Services & Internal Links -->
-    <section id="services" class="container">
-        <div class="section-title">
-            <h2>خدماتنا التخصصية بالرياض</h2>
-            <p>حلول شاملة للهندسة والديكور الداخلي والتبليط</p>
-        </div>
-        <div class="grid-3">
-            <div class="card">
-                <div class="card-icon"><i class="fa fa-layer-group"></i></div>
-                <h3>تركيب السيراميك والبورسلين</h3>
-                <p>تركيب أرضيات وجدران بدقة متناهية باستخدام الليزر والغراء الإيطالي لضمان عدم وجود فواصل أو فروقات مستوية.</p>
-                <span class="info-badge">ضمان الجودة</span>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa fa-cubes"></i></div>
-                <h3>توريد وتركيب الرخام</h3>
-                <p>تركيب ميكانيكي وعادي للواجهات والأرضيات والدرج الداخلي والخارجي، مع الجلي والتلميع الاحترافي.</p>
-                <span class="info-badge">رخام طبيعي وصناعي</span>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa fa-sink"></i></div>
-                <h3>تفصيل مغاسل رخام مودرن</h3>
-                <p>تصميم وتفصيل مغاسل رخام عصرية بتصميمات مخفية، أحواض منحوتة بالكامل، وإضاءات ليد مخفية تضفي فخامة للمكان.</p>
-                <span class="info-badge">تنفيذ حسب الطلب</span>
-            </div>
-        </div>
-    </section>
+    <main class="container">
+        <!-- القسم الأول: خدمات معلم رخام بالرياض وتركيب الرخام -->
+        <div class="section-card">
+            <h2><span class="num">01</span> خدمات معلم رخام بالرياض وتركيب جميع أنواع الرخام الفاخر</h2>
+            
+            <img src="w5.png" alt="معلم رخام بالرياض" class="section-main-img">
 
-    <!-- Section 02: Washbasins & Explanatory Guide (وسائل وشروح توضيحية) -->
-    <section id="washbasins" style="background: #ffffff;" class="container">
-        <div class="section-title">
-            <h2>دليل تفصيل مغاسل الرخام (شروح توضيحية)</h2>
-            <p>كل ما تحتاج معرفته عن أنواع التصاميم وطرق التنفيذ الصحيحة</p>
-        </div>
-        <div class="grid-3">
-            <div class="card" style="background: var(--light);">
-                <div class="card-icon"><i class="fa fa-lightbulb"></i></div>
-                <h3>مغاسل ذات التصريف المخفي</h3>
-                <p><strong>الشرح الفني:</strong> تصميم يعتمد على إخفاء فتحة التصريف تحت شريحة رخامية مائلة، مما يمنح مظهراً انسيابياً نظيفاً وسهولة تامة في التنظيف ومنع تراكم الرواسب والصابون.</p>
-            </div>
-            <div class="card" style="background: var(--light);">
-                <div class="card-icon"><i class="fa fa-shield-alt"></i></div>
-                <h3>المغاسل المعلقة جدارياً</h3>
-                <p><strong>الشرح الفني:</strong> تثبت بهياكل معدنية مخفية تحمل أوزاناً عالية، مما يترك مساحة أسفل المغسلة فارغة ليسهل تنظيف الأرضية ويعطي شعوراً باتساع المساحة في دورات المياه الحديثة.</p>
-            </div>
-            <div class="card" style="background: var(--light);">
-                <div class="card-icon"><i class="fa fa-bolt"></i></div>
-                <h3>دمج إضاءات الـ LED</h3>
-                <p><strong>الشرح الفني:</strong> إضافة خطوط إضاءة خفية خلف المرايا أو أسفل جسم المغسلة (Warm White أو Daylight) لتسليط الضوء على عروق الرخام وإبراز فخامته الليلية.</p>
-            </div>
-        </div>
-    </section>
+            <p>يعتبر الاستعانة بـ <strong>معلم رخام بالرياض</strong> صاحب خبرة طويلة الركيزة الأساسية للحصول على أرضيات وواجهات تعكس أعلى درجات الفخامة والأناقة في المنازل، الفلل، والقصور. نحن في مؤسستنا نوفر لكم أفضل فنيي <strong>تركيب الرخام</strong> المعتمدين بمدينة الرياض والذين يمتلكون المهارة العالية والخبرة العميقة في التعامل مع جميع أنواع الرخام الطبيعي والصناعي على حد سواء. تشمل خدماتنا كافة أحياء الرياض العاصمة (الصحافة، حطين، النرجس، الملقا، الياسمين، العارض، الدرعية، وكافة مناطق شمال وشرق وجنوب وغرب الرياض) مع التزامنا الكامل بأعلى معايير الدقة الهندسية والسرعة في التنفيذ.</p>
 
-    <!-- Section 03: Comparison Table -->
-    <section id="comparison" class="container">
-        <div class="section-title">
-            <h2>مقارنة بين الرخام الطبيعي والصناعي للمغاسل</h2>
-            <p>اختر الخيار الأنسب لميزانيتك وطبيعة الاستخدام</p>
-        </div>
-        <div class="comparison-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>وجه المقارنة</th>
-                        <th>الرخام الطبيعي (كريما مارفل، كلكتا، إلخ)</th>
-                        <th>الرخام الصناعي (الكوارث / الأكريليك)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>المظهر والجمالية</strong></td>
-                        <td>عروق فريدة، فخامة عالية لا تتكرر، ملمس طبيعي.</td>
-                        <td>ألوان متجانسة وموحدة، تصاميم مودرن نظيفة.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>المتانة والتحمل</strong></td>
-                        <td>صلب جداً ولكن يحتاج عناية ضد الأحماض القوية.</td>
-                        <td>مقاوم للماء بنسبة 100%، سهل الإصلاح والتلميع.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>الاستخدام الموصى به</strong></td>
-                        <td>الصالات، المجالس، والمغاسل الرئيسية الفاخرة.</td>
-                        <td>مغاسل الحمامات العامة وغرف الأطفال لسهولة الصيانة.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+            <p>تتضمن أعمال <strong>معلم رخام</strong> خبرة واسعة في اختيار الأساليب المناسبة لكل مشروع؛ حيث نقوم بتركيب أرضيات الرخام الفاخرة مثل رخام كلكتا، ستاتواريو، كريم مارفل، ورخام إمبرادور الإسباني. نعتمد تقنيات تسوية الأسطح بدقة متناهية مع استخدام خلطات التثبيت المقواة وعوازل الرطوبة التي تضمن عدم تغير لون الرخام أو ظهور التموجات والكسور على المدى الطويل. كما نقوم بتنفيذ أعمال جلي وتلميع الرخام بالماس لمعالجة الفواصل وإخفاء أية عيوب تصنيعية لتعود الأرضيات كالمرآة الصافية.</p>
 
-    <!-- Section 04: Steps -->
-    <section id="steps" style="background: #f1f5f9;" class="container">
-        <div class="section-title">
-            <h2>مراحل تفصيل وتركيب المغاسل (خطوات العمل)</h2>
-            <p>من الفكرة والتصميم إلى التسليم النهائي على الجاهز</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-box">
-                <div class="step-num">1</div>
-                <h4>الرفع والمعاينة</h4>
-                <p>أخذ المقاسات بدقة من الموقع بالرياض وتحديد أماكن الصرف والتغذية.</p>
-            </div>
-            <div class="step-box">
-                <div class="step-num">2</div>
-                <h4>اختيار اللوح</h4>
-                <p>اختيار نوع الرخام المناسب من المعرض أو الكتلوجات الرقمية.</p>
-            </div>
-            <div class="step-box">
-                <div class="step-num">3</div>
-                <h4>القص بالليزر (Waterjet)</h4>
-                <p>قص الألواح وتشكيل الحوافر والأحواض بأعلى دقة هندسية.</p>
-            </div>
-            <div class="step-box">
-                <div class="step-num">4</div>
-                <h4>التجميع والتركيب</h4>
-                <p>التركيب الميداني بالرياض واختبار التصريف والإضاءة والتثبيت.</p>
-            </div>
-        </div>
-    </section>
+            <p>بالإضافة إلى ذلك، ينفرد <strong>معلم تركيب رخام بالرياض</strong> بتقديم حلول متطورة لتركيب الواجهات والمداخل الرئيسية باستخدام نظام <strong>تركيب رخام ميكانيكي بالرياض</strong>. هذا النظام يعتمد على الكوابيل والبراغي الفولاذية المقاومة للصدأ لتثبيت ألواح الرخام الضخمة والأحجار الثقيلة على الجدران والواجهات الخارجية بآمان تام يضمن الصمود بوجه العوامل الجوية المتقلبة، مع توفير عزل حراري ومائي خلف الألواح لحماية المبنى بشكل كامل.</p>
 
-    <!-- Section 05: FAQ -->
-    <section id="faq" class="container">
-        <div class="section-title">
-            <h2>الأسئلة الشائعة حول تركيب الرخام والمغاسل</h2>
-            <p>إجابات واضحة عن أبرز الاستفسارات الشائعة</p>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">كم تستغرق عملية تفصيل مغسلة رخام بالرياض؟ <i class="fa fa-chevron-down"></i></div>
-                <div class="faq-answer">عادة ما تستغرق العملية ما بين 3 إلى 5 أيام عمل، تبدأ بأخذ المقاسات والقص الدقيق بالورشة ثم التركيب والتسليم بالموقع.</div>
+            <p>إذا كنت تبحث عن التميز والرقي في تشطيب منزلك، فإن فريقنا المكون من أداء <strong>معلم رخام</strong> محترف جاهز دائماً لتلبية تطلعاتك وتقديم الاستشارات الفنية المجانية وااختيار أفضل العينات التي تتناسب مع الديكور الداخلي والخارجي. اتصل بنا اليوم للحصول على أرخص أسعار تركيب الرخام بالرياض مع ضمان شامل على الأعمال كافة.</p>
+            
+            <div class="gallery-grid">
+                <img src="x1.png" alt="تركيب أرضيات رخام فاخر بالرياض" class="gallery-img">
+                <img src="x2.jpg" alt="تركيب رخام واجهات ميكانيكي بالرياض" class="gallery-img">
+                <img src="x3.jpg" alt="تشطيب أرضيات وتفصيل رخام" class="gallery-img">
+                <img src="x4.jpg" alt="تصميم وتركيب رخام مودرن" class="gallery-img">
+                <img src="x5.jpg" alt="أعمال تركيب رخام أرضيات وجدران" class="gallery-img">
             </div>
-            <div class="faq-item">
-                <div class="faq-question">ما هي المواد المستخدمة لتنظيف وصيانة الرخام؟ <i class="fa fa-chevron-down"></i></div>
-                <div class="faq-answer">يوصى باستخدام الماء الفاتر والصابون المتعادل المخصص للرخام، ويُحذر تماماً من استخدام المنظفات الحمضية أو الأسيد التي تؤدي لتآكل سطح الرخام وفقدان لمعانه.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">هل تشمل خدماتكم التوريد والتركيب معاً؟ <i class="fa fa-chevron-down"></i></div>
-                <div class="faq-answer">نعم، نقدم خدمة متكاملة تشمل توريد أجود أنواع الرخام والسيراميك والبورسلين مع التفصيل الدقيق والتركيب الاحترافي على يد فنيين مَهَرة.</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
+            <p style="margin-top: 15px;">للتواصل المباشر مع معلم رخام ومعلم تفصيل مغاسل بالرياض: 0574688407</p>
+        </div>
+
+        <!-- القسم الثاني: تفصيل مغاسل رخام مودرن بالرياض -->
+        <div class="section-card">
+            <h2><span class="num">02</span> تفصيل مغاسل رخام مودرن بالرياض وتصاميم المغاسل المخفية</h2>
+            <p>أصبحت <strong>مغاسل رخام مودرن</strong> من أهم العناصر الجمالية التي تعكس الذوق الرفيع في المجالس والصالات والدورات الفاخرة بمدينة الرياض. نحن نتميز في تقديم خدمات <strong>تفصيل مغاسل رخام</strong> و<strong>تفصيل مغاسل</strong> مخصصة بالكامل وفق الرغبة والمقاسات الدقيقة لعملائنا الكرام. إن اختيارك لتفصيل مغسلة رخام مودرن يتيح لك الخروج عن نمط المغاسل التقليدية وتجسيد لوحة فنية عصرية تتناغم مع لون الجدران والديكور العام للمكان.</p>
+
+            <p>نحرص في عمليات <strong>تفصيل مغاسل الرخام بالرياض</strong> على مواكبة أحدث صيحات الموضة العالمية لعام 2026. يشمل ذلك تصميم المغاسل المعلقة التي تعطي إيحاءً بالاتساع والرحابة، وتصميم الأحواض ذات التصريف المخفي (Hidden Drain) التي تخفي فتحات المياه بشكل هندسي ساحر. كما نقوم بدمج الإضاءات المخفية (LED Streep Light) أسفل وفي جوانب المغسلة لإبراز جمال وتعرجات عروق الرخام الطبيعي أثناء الاستخدام.</p>
+
+            <p>يعمل <strong>معلم رخام بالرياض</strong> على مراعاة كافة الجوانب الفنية عند تفصيل المغاسل؛ بدءاً من تقطيع ألواح الرخام باستخدام تقنية قص الجيت المائي (Waterjet) لضمان زوايا حادة ونظيفة بنسبة 100%، وصولاً إلى دمج حوامل التثبيت الفولاذية المخفية داخل الجدار لضمان تحمل المغسلة لأوزان ثقيلة جداً دون أي خطر للسقوط أو الاهتزاز. كما نوفر خدمة دمج المرايا الذكية المزودة باللمس وإزالة الضباب مع مغاسل الرخام المودرن لتقديم تجربة استخدام فاخرة ومتكاملة.</p>
+
+            <p>سواء كنت ترغب في <strong>تفصيل مغاسل رخام مخفية</strong> للمجالس الرجالية أو النسائية أو للمطاعم والفنادق الفخمة بالرياض، نوفر لك مجموعة واسعة من التصاميم الكلاسيكية والمودرن بأسعار منافسة تناسب كافة الميزانيات. اتصل بنا على الرقم 0574688407 للاطلاع على أحدث الكتالوجات وتنفيذ مغسلة أحلامك بأعلى معايير الإتقان.</p>
+        </div>
+
+        <!-- القسم الثالث: مدونة المقالات الأسبوعية المتخصصة (SEO) -->
+        <div class="section-card">
+            <h2><span class="num">03</span> مدونة مقالات الرخام والسيراميك بالرياض (دليل النصائح والخبرات)</h2>
+            <p>نحرص دائماً في مؤسسة السندال على إفادة عملائنا بأهم النصائح والمعلومات الفنية حول اختيار وتفصيل وتركيب الرخام والسيراميك والبورسلين بالرياض. إليكم أحدث المقالات التخصصية المقترحة لهذا الأسبوع:</p>
+
+            <!-- المقالة الأولى -->
+            <article class="article-card">
+                <h3>دليل اختيار وتفصيل مغاسل رخام مودرن بالرياض لعام 2026</h3>
+                <p>تعتبر <strong>مغاسل الرخام المودرن</strong> عنوان الفخامة في المجالس والفلل الحديثة بمدينة الرياض. عند تفكيرك في <strong>تفصيل مغاسل رخام</strong> جديدة، هناك مجموعة من العناصر الأساسية التي يجب عليك الاستفسار عنها لضمان أقصى جودة واستدامة:</p>
+                <ul>
+                    <li><strong>نوع التصريف المخفي:</strong> نوصي بدعم حوض المغسلة بشلال مائل وتصريف مخفي يسهل فكه وتنظيفه يدوياً لمنع تراكم التكلسات.</li>
+                    <li><strong>دمج الإضاءة الدافئة (LED):</strong> إدراج شريط إضاءة مقاوم للماء أسفل حواف المغسلة يبرز العروق الطبيعية للرخام ويمنح المكان اتساعاً بصرياً.</li>
+                    <li><strong>الشواصي الحديدية المجلفنة:</strong> التأكد من تثبيت المغسلة على كوابيل حديدية جدارية مقاومة للصدأ تتحمل أوزاناً تصل إلى أكثر من 150 كجم بآمان تام.</li>
+                </ul>
+                <p>تواصل مع <strong>معلم رخام بالرياض</strong> على الرقم 0574688407 للاطلاع على أحدث كتلوجات تفصيل مغاسل الرخام الصناعي والطبيعي.</p>
+            </article>
+
+            <!-- المقالة الثانية -->
+            <article class="article-card">
+                <h3>أفضل طرق تركيب السيراميك والبورسلين بالرياض بدون فراغات</h3>
+                <p>يبحث الكثير من العملاء عن <strong>معلم سيراميك بالرياض</strong> يتمتع بالدقة في ضبط ميول السيراميك والبورسلين وتفادي مشكلة التطبيل أو انخفاض بلاطة عن الأخرى. إليك أهم خطوات التركيب الناجح:</p>
+                <ul>
+                    <li><strong>استخدام صليب وبلاطات التسوية (Tile Leveling System):</strong> يضمن هذا النظام استواء السطح بالكامل بين البلاطات بنسبة 100% دون وجود أي بروز أو حواف حادة.</li>
+                    <li><strong>اختيار الغراء المناسب للبورسلين:</strong> البورسلين يتطلب غراء خاص مخصص للالتصاق القوي وقليل المسام عكس السيراميك العادي الذي يركب بالخلطة السيمانتية.</li>
+                    <li><strong>ترك فواصل تمدد (Expansion Joints):</strong> يجب ترك فواصل صغيرة (1.5 ملم إلى 2 ملم) وتعبئتها بروبة إيبوكسية مقاومة للبكتيريا والماء لتجنب ارتفاع البلاط مع تغيّر درجات الحرارة في الرياض.</li>
+                </ul>
+                <p>يوفر لكم <strong>معلم تركيب سيراميك ورخام بالرياض</strong> خدمات تنفيذ واستلام هندسي دقيق لكافة أعمال السيراميك والبورسلين والرخام.</p>
+            </article>
+
+            <!-- المقالة الثالثة -->
+            <article class="article-card">
+                <h3>مقارنة بين الرخام الطبيعي والصناعي: أيهما الأفضل لمجلسك؟</h3>
+                <p>عند اتخاذ القرار بـ <strong>تفصيل مغاسل</strong> أو أرضيات للمجلس، يتساءل الكثيرون عن الفرق بين خامات الرخام الطبيعي والصناعي. نلخص لك الفروقات الجوهرية في النقاط التالية:</p>
+                <p><strong>الرخام الطبيعي:</strong> يمنح فخامة لا تضاهى بعروقه الفريدة التي تشكلت عبر ملايين السنين (مثل رخام الكلكتا والستاتواريو وكريم مارفل). يناسب جداً مجالس الضيوف الرئيسية وواجهات المنازل، ولكنه يتطلب حماية متواصلة بمواد عازلة منعاً لامتصاص السوائل.</p>
+                <p><strong>الرخام الصناعي (الكوريان والألواح المركبة):</strong> يتميز بصلابة فائقة وعدم وجود مسامات إطلاقاً، مما يجعله مضاداً تماماً للبقع والزيوت والبكتيريا وسهل التنظيف للغاية، وهو الخيار المثالي للمغاسل ذات الاستخدام اليومي المكثف والحمامات والمطابخ.</p>
+            </article>
+        </div>
+
+        <!-- القسم الرابع: الفرق بين تفصيل مغاسل الرخام الطبيعي والصناعي -->
+        <div class="section-card">
+            <h2><span class="num">04</span> تفصيل مغاسل رخام طبيعي وتفصيل مغاسل رخام صناعي مقارنة شاملة</h2>
+            <p>عند اتخاذ القرار بـ <strong>تفصيل مغاسل</strong> منزلية جديدة، يحتار الكثير من العملاء بالرياض بين اختيار <strong>تفصيل مغاسل رخام طبيعي</strong> أو الاستعانة بـ <strong>تفصيل مغاسل رخام صناعي</strong>. يقدم لكم <strong>معلم رخام</strong> السندال توضيحاً تفصيلياً ومقارنة شاملة لمساعدتكم في اتخاذ القرار الأنسب لاحتياجاتكم وديكورات منازلكم.</p>
+
+            <p><strong>أولاً: تفصيل مغاسل رخام طبيعي:</strong> يتميز الرخام الطبيعي (مثل الكلكتا، الستاتواريو، البيبي كابتشينو، والإمبرادور) بفخامته الاستثنائية التي لا يمكن تقليدها؛ حيث تكون كل قطعة رخام عبارة عن تحفة فريدة بعروقها وتشكيلاتها الطبيعية التي كونتها الطبيعة عبر آلاف السنين. يمنح الرخام الطبيعي قيمة استثمارية وعقارية عالية للمكان، ويتحمل درجات الحرارة العالية بشكل ممتاز. إلا أنه يتطلب معالجة وعزل خاص لمساماته بصفة دورية لضمان عدم امتصاص الزيوت أو المواد الكيميائية.</p>
+
+            <p><strong>ثانياً: تفصيل مغاسل رخام صناعي:</strong> يتم تصنيع الرخام الصناعي المقوى (مثل الكوريان أو الألواح المركبة) من خليط مسحوق الرخام مع الرزين والمواد الصمغية عالية الجودة. تتميز <strong>مغاسل رخام</strong> صناعي بكثافتها العالية وخلوها التام من المسام المائية، مما يجعلها مقاومة تماماً لامتصاص السوائل للبقع ومقاومة للبكتيريا والفطريات وسهلة التنظيف للغاية. كما توفر تنوعاً كبيراً في الألوان الموحدة والتصاميم المودرن بدون وجود فواصل ظاهرة.</p>
+
+            <p>يقوم <strong>معلم تركيب رخام بالرياض</strong> بتقديم المشورة الصادقة للعملاء؛ حيث يفضل استخدام الرخام الطبيعي في مجالس الضيوف والصالات الرئيسية لإبراز الفخامة المطلقة، بينما يوصى باستخدام الرخام الصناعي المقاوم في المغاسل ذات الاستخدام اليومي المكثف والحمامات الرئيسية. نحن نوفر كلاً النوعين بأعلى درجات الجودة والضمان لتلبية جميع طلبات <strong>مغاسل الرخام بالرياض</strong>.</p>
+        </div>
+
+        <!-- القسم الخامس: خطوات ومراحل تفصيل مغاسل الرخام حسب الطلب -->
+        <div class="section-card">
+            <h2><span class="num">05</span> خطوات ومراحل تفصيل مغاسل الرخام وتصنيعها بالرياض حسب الطلب</h2>
+            <p>تمر عملية <strong>تفصيل مغاسل رخام</strong> وتجهيزها داخل ورشنا المتخصصة بالرياض بمراحل هندسية دقيقة تضمن الخروج بمنتج نهائي خالٍ من الأخطاء ذي جودة متناهية. يعتمد <strong>معلم رخام بالرياض</strong> إستراتيجية تصنيع متطورة تبدأ من لحظة التواصل الأولى مع العميل وحتى مرحلة التثبيت والتسليم النهائي:</p>
+
+            <p><strong>المرحلة الأولى: أخذ المقاسات والمعاينة الميدانية:</strong> ينتقل الفني المختص إلى الموقع لرفع المقاسات باستخدام أجهزة الليزر الدقيقة، ومراجعة أماكن تمديدات السباكة ومنافذ التغذية والتصريف الجدارية لضمان تطابق تصميم المغسلة مع موقع التثبيت تماماً.</p>
+
+            <p><strong>المرحلة الثانية: اختيار التصميم وخامة الرخام:</strong> يتم اختيار نوع الرخام (طبيعي أو صناعي) واللون المفضل والتصميم المعماري للمغسلة (سواء كانت مغسلة حوض واحد أو حوضين أو مغسلة معلقة بشلال مائي مخفي).</p>
+
+            <p><strong>المرحلة الثالثة: القص والتجميع بتقنية Waterjet:</strong> تقطع ألواح الرخام بدقة فائقة باستخدام الجيت المائي، ثم تجمع الأجزاء بواسطة غراء الإيبوكسي الإيطالي الملون بنسق يطابق لون الرخام تماماً لتدبيس الزوايا وجعلها تبدو كقطعة رخامية واحدة متكاملة بدون فواصل بارزة.</p>
+
+            <p><strong>المرحلة الرابعة: العزل المائي وتلميع الحواف:</strong> يتم تطبيق طبقة عزل مائي نانو كريستال الشفافة لمنع تسرب المياه والأسيد إلى أحشاء الرخام، وتلميع كافة الحواف والزوايا الدائرية والمستقيمة لجعلها ناعمة وآمنة تماماً للاستخدام.</p>
+
+            <p><strong>المرحلة الخامسة: التركيب والتثبيت في الموقع:</strong> يتم نقل المغسلة بوسائل حماية خاصة وتثبيتها جدارياً باستعمال الشواصي الحديدية المجلفنة والمثبتات التوسعية الفولاذية، مع توصيل الخلاطات والمحابس المخفية وتجربة تدفق المياه واختبار التصريف قبل التسليم لضمان الأداء المثالي.</p>
+        </div>
+
+        <!-- القسم السادس: أسعار تفصيل مغاسل الرخام وتكلفة التركيب بالرياض -->
+        <div class="section-card">
+            <h2><span class="num">06</span> أسعار تفصيل مغاسل الرخام وتكلفة تركيب الرخام والسيراميك بمدينة الرياض</h2>
+            <p>تختلف أسعار وتكلفة <strong>تفصيل مغاسل رخام</strong> وخدمات <strong>تركيب الرخام والسيراميك</strong> بالرياض بناءً على عدة عوامل ومتغيرات أساسية. يسعى <strong>معلم رخام</strong> السندال إلى تحقيق المعادلة الصعبة بتقديم أعلى مستويات الجودة بأقل الأسعار والتكاليف الاقتصادية المناسبة لجميع عملائنا في المملكة.</p>
+
+            <p>تتضمن العوامل الرئيسية المؤثرة في تحديد التكلفة ما يلي: 
+            <br>1. <strong>نوع خامة الرخام والسيراميك:</strong> يختلف سعر المتر الطولي أو المربع بحسب نوع الرخام المختار؛ فالرخام الطبيعي النادر كالكلكتا الإيطالي يكون أعلى تكلفة مقارنة بالرخام الصناعي أو الرخام المحلي أو البورسلين.
+            <br>2. <strong>حجم ومقاس المغسلة:</strong> تقاس المغاسل عادة بالمتر الطولي، وتتزايد التكلفة كلما زاد طول المغسلة أو اشتملت على أحواض متعددة ومساحات تخزين رخامية إضافية.
+            <br>3. <strong>تعقيد التصميم المودرن:</strong> تصاميم <strong>مغاسل رخام مودرن</strong> التي تتضمن شلالات مائية، وتصريف مخفي، وإضاءة LED دقيقة تتطلب ساعات عمل وفنيات قص أكبر مقارنة بالتصاميم السادة.
+            <br>4. <strong>جودة المستلزمات والعوازل:</strong> استخدام مواد تثبيت إيطالية وعوازل نانو فائقة الجودة يضمن بقاء المغسلة لعشرات السنين دون الحاجة لصيانة.</p>
+
+            <p>نحن نلتزم بتقديم شفافية كاملة في العروض والأسعار؛ حيث نقدم للعميل تفصيلاً كاملاً للتكلفة شاملة المواد والقص والتوصيل والتركيب دون أية رسوم خفية. كما نوفر خصومات خاصة للمشاريع الكبيرة والمجمعات السكنية والفنادق بالرياض. تواصل معنا الآن على الرقم 0574688407 للحصول على تسعيرة فورية ومناسبة لمشروعك.</p>
+        </div>
+
+        <!-- القسم السابع: طرق العناية والصيانة وعزل مغاسل وأرضيات الرخام -->
+        <div class="section-card">
+            <h2><span class="num">07</span> الطرق الاحترافية للعناية والصيانة وعزل مغاسل وأرضيات الرخام</h2>
+            <p>يعتبر الرخام مادة طبيعية راقية تمتلك مسامات دقيقة جداً تجعلها تأثر بالعوامل الخارجية والمنظفات الكيميائية الحادة في حال عدم التعامل معها بحذر. يحرص <strong>معلم رخام بالرياض</strong> على تزويد العملاء بالتعليمات والإرشادات الهامة للحفاظ على بريق ولمعان <strong>مغاسل الرخام</strong> والأرضيات وجعلها تبدو كالجديدة طوال العمر.</p>
+
+            <p><strong>1. العزل الدائم للرخام:</strong> يوصى دائماً بتطبيق مادة عازلة مخصصة للرخام (Sealer) فور الانتهاء من عملية <strong>تفصيل مغاسل الرخام بالرياض</strong> أو تركيب الأرضيات. يعمل هذا العازل على تسديد المسامات السطحية لمنع توغل السوائل الملونة كالقهوة والزيوت والعطور داخل نسيج الرخام.</p>
+
+            <p><strong>2. تجنب المنظفات الحمضية والأسيد:</strong> يُحظر تماماً استخدام مواد التنظيف التي تحتوي على الأسيد أو الفلاش أو المواد المبيضة القوية على أسطح <strong>مغاسل رخام مودرن</strong> أو الأرضيات؛ حيث تتسبب هذه المواد في تأكل طبقة اللمعان الفوقية وظهور بقع بيضاء باهتة يصعب إزالتها إلا بجلخ الرخام مجدداً.</p>
+
+            <p><strong>3. التنظيف اليومي الآمن:</strong> يُفضل تنظيف المغاسل والأرضيات باستخدام الماء الدافي والصابون المتعادل (PH Neutral) مع استخدام قطع قماش ناعمة أو ممسحة مايكروفايبر، مع الحرص على تجفيف سطح المغسلة من بقايا المياه الكلسية لمنع ترسب الأملاح.</p>
+
+            <p><strong>4. خدمة الجلي والتلميع الدوري:</strong> عند تعرض أرضيات أو مغاسل الرخام للخدوش السطحية أو فقدان اللمعان بعد سنوات من الاستخدام، يمكن الاستعانة بـ <strong>معلم تركيب رخام بالرياض</strong> لإجراء عملية جلي وتلميع بالماس وإعادة معالجة الفواصل مع تطبيق عازل نانو إيطالي جديد يستعيد بها الرخام كامل رونقه وفخامته الأصلية.</p>
+        </div>
+
+        <!-- القسم الثامن: الأسئلة الشائعة حول خدمات الرخام ومغاسل الرخام بالرياض (FAQ) -->
+        <div class="section-card">
+            <h2><span class="num">08</span> الأسئلة الشائعة حول خدمات معلم الرخام وتفصيل المغاسل بالرياض</h2>
+            
+            <p><strong>س1: ما هي أفضل أنواع الرخام المناسبة لتفصيل مغاسل الرخام المودرن؟</strong><br>
+            ج1: يعتبر رخام الكلكتا الإيطالي، والستاتواريو، ورخام الإمبرادور الداكن، بالإضافة إلى ألواح الرخام الصناعي الكوريان من أفضل الخامات المستخدمة في <strong>تفصيل مغاسل رخام مودرن</strong> نظراً لمظهرها العصري وقوة تحملها العالية.</p>
+
+            <p style="margin-top: 15px;"><strong>س2: كم تستغرق مدة تفصيل وتوريد مغاسل الرخام بالرياض؟</strong><br>
+            ج2: تستغرق عملية <strong>تفصيل مغاسل</strong> الرخام من مرحلة رفع المقاسات والقص والتشكيل وحتى التثبيت النهائي ما بين 3 إلى 7 أيام عمل بحسب حجم المغسلة وتعقيد التصميم المطلوب.</p>
+
+            <p style="margin-top: 15px;"><strong>س3: هل توفرون خدمة تركيب سيراميك ورخام الدرج والواجهات إلى جانب تفصيل المغاسل؟</strong><br>
+            ج3: نعم، يوفر <strong>معلم رخام وسيراميك بالرياض</strong> خدمات متكاملة تشمل <strong>تركيب الرخام والسيراميك والبورسلين</strong> للأرضيات والواجهات الميكانيكية، وتفصيل تركيب درج الرخام، وتفصيل المدافئ والكاونترات لكافة أحياء الرياض.</p>
+
+            <p style="margin-top: 15px;"><strong>س4: كيف يتم ضمان عدم تسرب المياه من مغاسل الرخام المفصلة؟</strong><br>
+            ج4: نعتمد غراء الإيبوكسي الإيطالي المقاوم للمياه مع عزل نانو داخلي شامل لجميع زوايا وأحواض المغسلة، بالإضافة إلى توفير ضمان كتابي على جودة التثبيت وعدم التنسيم.</p>
+
+            <p style="margin-top: 15px;"><strong>س5: كيف يمكنني التواصل مع معلم رخام بالرياض لطلب الخدمة؟</strong><br>
+            ج5: يمكنك التواصل المباشر معنا عبر الاتصال الهاتفي أو رسائل الواتساب على الرقم الموحد: <strong>0574688407</strong> وسيقوم الفني بالرد عليك فوراً وتقديم الاستشارة والموعد المناسب للمعاينة.</p>
+
+            <a href="riyadh-services.html" class="btn-more-services"><i class="fa-solid fa-arrow-left"></i> عرض المزيد من خدمات تفصيل الرخام والسيراميك بالرياض</a>
+        </div>
+
+        <!-- موقعنا على الخريطة -->
+        <div class="section-card" style="text-align: center;">
+            <h2><i class="fa-brands fa-google" style="color: #4285F4;"></i> خدمة العملاء الفورية والموقع الجغرافي</h2>
+            <p>نصلكم أينما كنتم في كافة أحياء مدينة الرياض لتقديم خدمات تفصيل المغاسل وتركيب الرخام والسيراميك مباشرة في موقعكم:</p>
+            <a href="https://maps.app.goo.gl/WmAer7QcoWxrnE9S9?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn-gmb">
+                <i class="fa-solid fa-location-dot"></i> موقعنا وخدماتنا على خرائط جوجل
+            </a>
+        </div>
+
+        <!-- ملخص الكلمات المفتاحية ومعلومات المؤسسة -->
+        <div class="section-card">
+            <h2>معلم رخام وسيراميك السندال لتفصيل مغاسل وتركيب الرخام</h2>
+            <p><strong>الرئيسية - معلم رخام ومعلم سيراميك ومعلم تفصيل مغاسل رخام بالرياض</strong></p>
+            <p><strong>مؤسسة تفصيل مغاسل رخام مودرن وتفصيل رخام طبيعي وصناعي وتركيب سيراميك</strong></p>
+            <p><strong>معلم تركيب رخام وسيراميك بالرياض 0574688407</strong></p>
+            <p>يعتبر <strong>معلم رخام</strong> في مؤسستنا من أكفاء الفنيين المعتمدين في مدينة الرياض والمملكة، حيث نقدم أرخص الأسعار وأجود خدمات <strong>تركيب الرخام والسيراميك</strong>، <strong>تفصيل مغاسل</strong>، <strong>تفصيل مغاسل رخام</strong>، وتصميم أحدث <strong>مغاسل رخام مودرن</strong>.</p>
+            
+            <h3 style="margin-top: 20px; font-size: 18px; color: #0f172a;">محتوى الخدمة والكلمات الشائعة</h3>
+            <p>معلم رخام | معلم رخام بالرياض | معلم سيراميك بالرياض | معلم تركيب رخام | تركيب الرخام | تفصيل مغاسل | تفصيل مغاسل رخام | تفصيل مغاسل الرخام بالرياض | مغاسل رخام | مغاسل الرخام بالرياض | مغاسل رخام مودرن | مغاسل مودرن | تفصيل مغاسل رخام طبيعي | تفصيل مغاسل رخام صناعي | تركيب درج رخام | تركيب رخام ميكانيكي بالرياض | تفصيل مغاسل رخام مخفية | جلي وتلميع رخام | معلم رخام شمال الرياض | معلم رخام شرق الرياض | معلم رخام جنوب الرياض | معلم رخام غرب الرياض | رخام كلكتا | رخام امبرادور | رخام ستاتواريو | كاونترات رخام مطابخ | مدافئ رخام</p>
+            
+            <p style="margin-top: 15px;">نحن ندرك أهمية الأرضيات والواجهات والمغاسل في إبراز فخامة منزلك أو فندقك؛ لذلك يوفر لك <strong>معلم رخام بالرياض</strong> أروع التصاميم العصرية الحديثة للرخام الطبيعي والصناعي والسيراميك.</p>
+            
+            <h3 style="margin-top: 20px; font-size: 18px; color: #0f172a;">معلم تركيب رخام واجهات وتركيب ميكانيكي</h3>
+            <p>نوفر لك أفضل <strong>معلم رخام</strong> متخصص في تركيب واجهات الفلل والقصور والشركات تركيب ميكانيكي وعادي، بالإضافة إلى تلبيس المداخل والأسوار والسِلالم بأفخم أنواع الرخام والجرانيت وجلي وتلميع الرخام بالماس لضمان البريق الدائم.</p>
+
+            <p style="margin-top: 20px; font-weight: bold;">السندال للرخام والسيراميك - شريكك الأمثل لجميع أعمال الرخام وتفصيل المغاسل بالرياض</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #64748b;">سياسة الخصوصية | اتصل بنا: 0574688407</p>
+        </div>
+    </main>
+
     <footer>
-        <div class="container">
-            <h3>معلم رخام وسيراميك بالرياض - السندال</h3>
-            <p>للاستفسار وطلب الخدمات، اتصل بنا مباشرة على الرقم: <a href="tel:0574688407" style="color: var(--secondary); text-decoration: none; font-weight: bold;">0574688407</a></p>
-            <p style="margin-top: 30px;">&copy; 2026 جميع الحقوق محفوظة لـ mo3lem-ceramic.com</p>
-        </div>
+        <img src="w5.png" alt="معلم رخام وتفصيل مغاسل" class="footer-logo">
+        <p>معلم رخام السندال لتفصيل وتشكيل الرخام | معلم تركيب رخام وسيراميك وتفصيل مغاسل رخام بالرياض | تفصيل مغاسل رخام مودرن وتركيب رخام الدرج | اتصل الآن: 0574688407</p>
     </footer>
 
-    <!-- Floating Contact Buttons -->
-    <div class="float-btns">
-        <a href="https://wa.me/966574688407" class="float-btn whatsapp-float" target="_blank" aria-label="واتساب">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:0574688407" class="float-btn phone-float" aria-label="اتصال">
-            <i class="fa fa-phone"></i>
-        </a>
+    <!-- زر الهاتف العائم -->
+    <a href="tel:0574688407" class="call-float" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+    <!-- نافذة وزر محادثة الواتساب العائم التفاعلي -->
+    <button class="wa-float-btn" id="waFloatBtn" onclick="toggleWaChat()" aria-label="WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp" id="waIcon"></i>
+    </button>
+
+    <div class="wa-chat-popup active" id="waChatPopup">
+        <div class="wa-popup-header">
+            <div class="wa-header-info">
+                <div class="wa-header-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="wa-header-text">
+                    <div class="wa-header-title">محادثة مباشرة – واتساب</div>
+                    <div class="wa-header-status"><span class="wa-status-dot"></span> متصلون الآن - رد خلال دقائق</div>
+                </div>
+            </div>
+            <button class="wa-close-btn" onclick="toggleWaChat()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="wa-popup-body">
+            <div class="wa-msg-box">
+                أهلاً وسهلاً بك في السندال لتفصيل الرخام والمغاسل والسيراميك. نعتمد أعلى جودة في تفصيل مغاسل الرخام وتركيب الرخام بالرياض. اكتب استفسارك وسنرد عليك فوراً.
+            </div>
+            <div class="wa-quick-options">
+                <button class="wa-quick-btn" onclick="sendWaPreset('أريد معاينة وقياس مجاني لمغسلة رخام')">أريد معاينة وقياس مجاني لمغسلة رخام</button>
+                <button class="wa-quick-btn" onclick="sendWaPreset('استفسار عن أسعار تفصيل مغاسل الرخام المودرن')">استفسار عن أسعار تفصيل مغاسل الرخام المودرن</button>
+                <button class="wa-quick-btn" onclick="sendWaPreset('أريد تركيب رخام أرضيات أو درج أو سيراميك')">أريد تركيب رخام أرضيات أو درج أو سيراميك</button>
+            </div>
+        </div>
+        <div class="wa-popup-footer">
+            <input type="text" id="waCustomMsg" class="wa-input-box" placeholder="اكتب رسالتك هنا..." onkeypress="handleKeyPress(event)">
+            <button class="wa-send-btn" onclick="sendWaCustom()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+        <div class="wa-direct-call">
+            أو اتصل مباشرة: <a href="tel:0574688407">0574688407</a>
+        </div>
     </div>
+
+    <script>
+        const phoneNumber = "966574688407";
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('waChatPopup');
+            const icon = document.getElementById('waIcon');
+            if (popup.classList.contains('active')) {
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                icon.className = "fa-brands fa-whatsapp";
+            }
+        });
+
+        function toggleWaChat() {
+            const popup = document.getElementById('waChatPopup');
+            const icon = document.getElementById('waIcon');
+            
+            popup.classList.toggle('active');
+            
+            if (popup.classList.contains('active')) {
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                icon.className = "fa-brands fa-whatsapp";
+            }
+        }
+
+        function sendWaPreset(text) {
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function sendWaCustom() {
+            const input = document.getElementById('waCustomMsg');
+            const text = input.value.trim();
+            if(text !== "") {
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank');
+                input.value = "";
+            } else {
+                sendWaPreset("السلام عليكم، أريد الاستفسار عن تفصيل مغاسل الرخام وخدماتكم");
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendWaCustom();
+            }
+        }
+    </script>
 
 </body>
 </html>
-"""
 
-output_path = "index.html"
-with open(output_path, "w", encoding="utf-8") as f:
-    f.write(html_code)
-
-print("HTML file generated successfully.")
