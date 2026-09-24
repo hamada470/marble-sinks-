@@ -35,8 +35,9 @@
         .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24; background: #fff; padding: 2px; }
         .logo { font-size: 20px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 10px; }
-        .btn-call-head { background: #facc15; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3); }
-        
+        .btn-call-head { background: #facc15; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3); transition: 0.3s; }
+        .btn-call-head:hover { background: #eab308; }
+
         /* Hero Section */
         .hero { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; padding: 60px 20px; text-align: center; }
         .badge { background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin-bottom: 15px; border: 1px solid rgba(245, 158, 11, 0.4); }
@@ -44,8 +45,10 @@
         .hero h1 span { color: #fbbf24; }
         .hero p { font-size: 16px; color: #cbd5e1; max-width: 800px; margin: 0 auto 25px; }
         .hero-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn-wa { background: #25D366; color: #fff; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-ph { background: #facc15; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-wa { background: #25D366; color: #fff; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-wa:hover { background: #1ebc57; }
+        .btn-ph { background: #facc15; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-ph:hover { background: #eab308; }
 
         /* Main Content & Sections */
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
@@ -74,13 +77,15 @@
         .btn-gmb:hover { background: #3367d6; }
 
         /* Link to Sub-page */
-        .btn-more-services { background: #0f172a; color: #fbbf24; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; border: 1px solid #f59e0b; }
+        .btn-more-services { background: #0f172a; color: #fbbf24; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; border: 1px solid #f59e0b; transition: 0.3s; }
+        .btn-more-services:hover { background: #1e293b; }
 
-        /* Floating Buttons */
-        .call-float { position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); z-index: 999; text-decoration: none; }
-        
-        /* Floating WhatsApp Chat Popup Window */
-        .wa-float-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; cursor: pointer; transition: transform 0.3s ease; border: none; }
+        /* Floating Phone Button */
+        .call-float { position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 15px rgba(37,99,235,0.4); z-index: 999; text-decoration: none; transition: transform 0.3s ease; }
+        .call-float:hover { transform: scale(1.08); }
+
+        /* Floating WhatsApp Popup Window */
+        .wa-float-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; cursor: pointer; transition: transform 0.3s ease; border: none; }
         .wa-float-btn:hover { transform: scale(1.08); }
         .wa-chat-popup { display: none; position: fixed; bottom: 90px; right: 20px; width: 330px; max-width: calc(100vw - 40px); background: #1c221e; color: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); font-family: 'Tajawal', sans-serif; }
         .wa-chat-popup.active { display: block; animation: popupSlideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
@@ -96,7 +101,7 @@
         .wa-popup-body { padding: 15px; background: #121614; display: flex; flex-direction: column; gap: 10px; }
         .wa-msg-box { background: #222d27; border-radius: 12px; padding: 12px; font-size: 13px; color: #e1e7e4; line-height: 1.5; border: 1px solid rgba(255,255,255,0.05); }
         .wa-quick-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; margin-top: 5px; }
-        .wa-quick-btn { background: #222d27; color: #c3d1c9; border: 1px solid #324239; padding: 8px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.2s; text-align: right; font-family: 'Tajawal', sans-serif; }
+        .wa-quick-btn { background: #222d27; color: #c3d1c9; border: 1px solid #324239; padding: 8px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.2s; text-align: right; font-family: 'Tajawal', sans-serif; width: 100%; }
         .wa-quick-btn:hover { background: #2c3a32; color: #fff; border-color: #25d366; }
         .wa-popup-footer { padding: 10px 12px; background: #1c221e; display: flex; align-items: center; gap: 8px; border-top: 1px solid rgba(255,255,255,0.05); }
         .wa-input-box { flex: 1; background: #0f1311; border: 1px solid #2b3630; border-radius: 20px; padding: 8px 14px; color: #fff; font-size: 13px; outline: none; font-family: 'Tajawal', sans-serif; }
@@ -200,9 +205,9 @@
     <section class="hero">
         <span class="badge">⭐ معلم رخام ومعلم سيراميك وتفصيل مغاسل بالرياض</span>
         <h1>أفضل معلم رخام ومعلم تركيب رخام وسيراميك بالرياض <br><span>تفصيل مغاسل رخام مودرن وتفصيل مغاسل طبيعي وصناعي وتركيب الدرج</span></h1>
-        <p>نقدم خدمات متكاملة بصفتنا أفضل <strong>معلم رخام</strong>، <strong>معلم رخام بالرياض</strong>، <strong>معلم سيراميك بالرياض</strong>، و<strong>معلم تركيب رخام بالرياض</strong>. متخصصون في <strong>تفصيل مغاسل رخام</strong>، <strong>تفصيل مغاسل</strong>، <strong>مغاسل رخام</strong>، وتصميم <strong>مغاسل رخام مودرن</strong>، بالإضافة إلى <strong>تركيب الرخام والسيراميك</strong> للأرضيات والواجهات وتفصيل درج الرخام وكاونترات المطابخ والمدافئ وجلي وتلميع الرخام بجودة عالية.</p>
+        <p>نقدم خدمات متكاملة بصفتنا أفضل <strong>معلم رخام</strong>، <strong>معلم رخام بالرياض</strong>، <strong>معلم سيراميك بالرياض</strong>، و<strong>معلم تركيب رخام بالرياض</strong>. متخصصون في <strong>تفصيل مغاسل رخام</strong>، <strong>تفصيل مغاسل</strong>، <strong>مغاسل رخام</strong>، وتصميم <strong>مغاسل رخام مودرن</strong>، بالإضافة إلى <strong>تركيب الرخام بالسيراميك</strong> للأرضيات والواجهات وتفصيل درج الرخام وكاونترات المطابخ والمدافئ وجلي وتلميع الرخام بجودة عالية.</p>
         <div class="hero-btns">
-            <a href="https://wa.me/966574688407" class="btn-wa"><i class="fa-brands fa-whatsapp"></i> واتساب مباشر</a>
+            <a href="https://wa.me/966574688407" target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="fa-brands fa-whatsapp"></i> واتساب مباشر</a>
             <a href="tel:0574688407" class="btn-ph"><i class="fa-solid fa-phone"></i> اتصل بنا الآن</a>
         </div>
     </section>
@@ -224,7 +229,7 @@
             
             <div class="gallery-grid">
                 <img src="x1.png" alt="تركيب أرضيات رخام فاخر بالرياض" class="gallery-img">
-                <img src="x2.jpg" alt="تركيب رخام واجهات ميكانيكي" class="gallery-img">
+                <img src="x2.jpg" alt="تركيب رخام واجهات ميكانيكي بالرياض" class="gallery-img">
                 <img src="x3.jpg" alt="تشطيب أرضيات وتفصيل رخام" class="gallery-img">
                 <img src="x4.jpg" alt="تصميم وتركيب رخام مودرن" class="gallery-img">
                 <img src="x5.jpg" alt="أعمال تركيب رخام أرضيات وجدران" class="gallery-img">
@@ -401,7 +406,7 @@
 
     <!-- نافذة وزر محادثة الواتساب العائم التفاعلي -->
     <button class="wa-float-btn" id="waFloatBtn" onclick="toggleWaChat()" aria-label="WhatsApp Chat">
-        <i class="fa-solid fa-xmark" id="waIcon"></i>
+        <i class="fa-brands fa-whatsapp" id="waIcon"></i>
     </button>
 
     <div class="wa-chat-popup active" id="waChatPopup">
@@ -438,22 +443,22 @@
         const phoneNumber = "966574688407";
 
         window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const popup = document.getElementById('waChatPopup');
-                const icon = document.getElementById('waIcon');
-                if(!popup.classList.contains('active')){
-                    popup.classList.add('active');
-                    icon.className = "fa-solid fa-xmark";
-                }
-            }, 1000);
+            const popup = document.getElementById('waChatPopup');
+            const icon = document.getElementById('waIcon');
+            if (popup.classList.contains('active')) {
+                icon.className = "fa-solid fa-xmark";
+            } else {
+                icon.className = "fa-brands fa-whatsapp";
+            }
         });
 
         function toggleWaChat() {
             const popup = document.getElementById('waChatPopup');
             const icon = document.getElementById('waIcon');
+            
             popup.classList.toggle('active');
             
-            if(popup.classList.contains('active')) {
+            if (popup.classList.contains('active')) {
                 icon.className = "fa-solid fa-xmark";
             } else {
                 icon.className = "fa-brands fa-whatsapp";
