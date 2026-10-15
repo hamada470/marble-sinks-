@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تفصيل مغاسل رخام بالرياض مودرن وفخمة | مؤسسة الجودة والفن</title>
-    <meta name="description" content="أفضل ورشة تفصيل مغاسل رخام بالرياض. تصاميم مودرن وكلاسيكية للمغاسل المصنوعة من الرخام الطبيعي والصناعي بأسعار تنافسية وضمان الجودة العالية.">
+    <meta name="description" content="أفضل ورشة تفصيل مغاسل رخام بالرياض. تصاميم مودرن والكلاسيكية للمغاسل المصنوعة من الرخام الطبيعي والصناعي بأسعار تنافسية وضمان الجودة العالية.">
     <meta name="keywords" content="تفصيل مغاسل رخام بالرياض, مغاسل رخام مودرن, مغاسل رخام صناعي وطبيعي, تفصيل مغاسل حمامات بالرياض, تصميم مغاسل فخمة, أسعار مغاسل الرخام, ورشة تفصيل رخام الرياض">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -21,10 +21,10 @@
             text-align: right; 
         }
 
-        /* شريط الهيدر العلوي النحيف جداً للرقم والاتصال */
+        /* شريط علوي نحيف جداً لرقم الهاتف فقط */
         .top-bar {
             background: #111827;
-            padding: 6px 15px;
+            padding: 4px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,28 +37,25 @@
         .top-bar-brand {
             color: #d1d5db;
             font-weight: 600;
+            font-size: 12px;
         }
         .top-bar-call {
             background: #ffcc00;
             color: #0b132b;
-            padding: 3px 12px;
+            padding: 2px 10px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 12px;
-            font-size: 13px;
+            border-radius: 10px;
+            font-size: 12px;
             display: flex;
             align-items: center;
             gap: 4px;
-            transition: transform 0.2s;
-        }
-        .top-bar-call:hover {
-            transform: scale(1.05);
         }
 
-        /* قسم الهيدر الرئيسي (الشعار والغلاف والعنوان) */
+        /* الهيدر الرئيسي (يحتوي الشعار من الصور والغلاف) */
         header { 
             background: #1c2541; 
-            padding: 20px; 
+            padding: 15px; 
             text-align: center; 
             border-bottom: 3px solid #ffcc00; 
         }
@@ -68,11 +65,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
         .logo-img {
-            width: 90px;
-            height: 90px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #ffcc00;
@@ -81,7 +78,7 @@
         }
         .cover-img {
             width: 100%;
-            max-height: 320px;
+            max-height: 300px;
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid #2a3a5e;
@@ -89,12 +86,12 @@
         }
         h1 { 
             color: #ffcc00; 
-            font-size: 22px; 
+            font-size: 20px; 
             margin: 0; 
         }
         header p {
             margin: 0;
-            font-size: 14px;
+            font-size: 13px;
             color: #d1d5db;
         }
 
@@ -122,12 +119,12 @@
             padding-right: 20px; 
         }
 
-        /* معرض الصور */
+        /* معرض الصور تبدأ في البداية */
         .gallery-title {
             color: #ffcc00;
             font-size: 22px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 5px;
             margin-bottom: 15px;
         }
         .image-gallery {
@@ -183,17 +180,17 @@
             margin: 10px; 
         }
 
-        /* الأزرار العائمة */
+        /* الأزرار العائمة (أكبر وأضخم حجماً) */
         .floating-btn {
             position: fixed;
             bottom: 25px;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
             z-index: 9999;
             text-decoration: none;
             transition: transform 0.3s ease;
@@ -202,8 +199,8 @@
             transform: scale(1.1);
         }
         .floating-btn svg {
-            width: 34px;
-            height: 34px;
+            width: 40px;
+            height: 40px;
             fill: #ffffff;
         }
 
@@ -214,10 +211,10 @@
             animation: shake 3s infinite ease-in-out;
         }
 
-        /* زر اتصال عائم - يسار */
+        /* زر اتصال عائم - يسار (باللون الأخضر نفس الواتساب) */
         .float-phone {
             left: 20px;
-            background-color: #007bff;
+            background-color: #25D366;
         }
 
         /* انيميشن اهتزاز بسيط للواتساب */
@@ -242,20 +239,20 @@
 
         @media (max-width: 600px) {
             .floating-btn {
-                width: 52px;
-                height: 52px;
+                width: 60px;
+                height: 60px;
                 bottom: 20px;
             }
             .floating-btn svg {
-                width: 28px;
-                height: 28px;
+                width: 33px;
+                height: 33px;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- شريط علوي نحيف للرقم والاتصال السريع -->
+<!-- شريط علوي نحيف جداً لرقم الهاتف فقط -->
 <div class="top-bar">
     <span class="top-bar-brand">مؤسسة الجودة والفن</span>
     <a href="tel:0563645006" class="top-bar-call">
@@ -263,12 +260,12 @@
     </a>
 </div>
 
-<!-- الهيدر الرئيسي (الشعار، صورة الغلاف والعنوان) -->
+<!-- الهيدر الرئيسي (الشعار المأخوذ من الملفات، الغلاف والعنوان) -->
 <header>
     <div class="header-content">
-        <!-- استبدل 'logo.png' باسم ملف الشعار الخاص بك -->
-        <img src="logo.png" alt="شعار المؤسسة" class="logo-img">
-        <!-- استبدل 'cover.png' باسم صورة الغلاف المفضلة لديك أو إحدى الصور الموجودة -->
+        <!-- تم استخدام Hh1.webp كشعار حقيقي من صورك -->
+        <img src="Hh1.webp" alt="شعار المؤسسة" class="logo-img">
+        <!-- تم استخدام Hh9.png كصورة غلاف في البداية -->
         <img src="Hh9.png" alt="صورة غلاف مغاسل رخام" class="cover-img">
         <div>
             <h1>تفصيل مغاسل رخام بالرياض مودرن وفخمة</h1>
@@ -278,7 +275,7 @@
 </header>
 
 <div class="container">
-    <!-- معرض صور أعمالنا يظهر في البداية -->
+    <!-- معرض الصور في بداية المحتوى -->
     <h2 class="gallery-title">معرض أحدث أعمالنا في تفصيل المغاسل</h2>
     <div class="image-gallery">
         <div class="gallery-item"><img src="Hh9.png" alt="مغسلة رخام فخمة بالرياض 1"></div>
@@ -309,14 +306,14 @@
     </div>
 </div>
 
-<!-- زر واتساب عائم - يمين (مع اهتزاز) -->
+<!-- زر واتساب عائم - يمين (أكبر حجماً مع اهتزاز) -->
 <a href="https://wa.me/966563645006" class="floating-btn float-whatsapp" target="_blank" aria-label="تواصل معنا عبر واتساب">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18.1-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18.1-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
     </svg>
 </a>
 
-<!-- زر اتصال عائم - يسار -->
+<!-- زر اتصال عائم - يسار (أكبر حجماً وباللون الأخضر نفس الواتساب) -->
 <a href="tel:0563645006" class="floating-btn float-phone" aria-label="اتصل بنا الآن">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path d="M164.9 24c-12.3 0-23.7 6.6-30 17.3l-48 80c-6.6 11-6 24.8 1.5 35.2l70.1 98.1c-13.2 19.8-28.9 38-46.8 54.3-17.3 15.7-36.4 29.5-56.9 41.1l-92.4-71.8c-10.6-8.2-25.1-9-36.5-2.1l-80 48C17.3 329.8 10 341.8 10 355c0 102.6 83.2 185.8 185.8 185.8 12.1 0 24.2-.8 36.3-2.4 140.7-18.6 250.9-128.8 269.5-269.5 1.6-12.1 2.4-24.2 2.4-36.3C504 129.2 420.8 46 318.2 46c-13.2 0-25.2 7.3-30.9 19.1l-48 80c-6.9 11.4-6.1 25.9 2.1 36.5l71.8 92.4c-11.6 20.5-25.4 39.6-41.1 56.9-16.3 17.9-34.5 33.6-54.3 46.8l-98.1-70.1c-10.4-7.5-24.2-8.1-35.2-1.5l-80 48C21.4 353.4 14.8 364.8 14.8 377.1z"/>
