@@ -21,51 +21,81 @@
             text-align: right; 
         }
 
-        /* الهيدر الثابت */
-        header { 
-            background: #1c2541; 
-            padding: 15px 20px; 
-            text-align: center; 
-            border-bottom: 3px solid #ffcc00; 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        /* شريط الهيدر العلوي النحيف جداً للرقم والاتصال */
+        .top-bar {
+            background: #111827;
+            padding: 6px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            border-bottom: 2px solid #ffcc00;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 13px;
         }
-        .header-title {
-            text-align: right;
+        .top-bar-brand {
+            color: #d1d5db;
+            font-weight: 600;
+        }
+        .top-bar-call {
+            background: #ffcc00;
+            color: #0b132b;
+            padding: 3px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 12px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: transform 0.2s;
+        }
+        .top-bar-call:hover {
+            transform: scale(1.05);
+        }
+
+        /* قسم الهيدر الرئيسي (الشعار والغلاف والعنوان) */
+        header { 
+            background: #1c2541; 
+            padding: 20px; 
+            text-align: center; 
+            border-bottom: 3px solid #ffcc00; 
+        }
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            background: #ffffff;
+        }
+        .cover-img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #2a3a5e;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
         h1 { 
             color: #ffcc00; 
-            font-size: 20px; 
-            margin: 0 0 5px 0; 
+            font-size: 22px; 
+            margin: 0; 
         }
         header p {
             margin: 0;
-            font-size: 13px;
-            color: #d1d5db;
-        }
-        .header-call-btn {
-            background: #ffcc00;
-            color: #0b132b;
-            padding: 8px 18px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 20px;
             font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 2px 8px rgba(255,204,0,0.4);
-            transition: transform 0.2s;
-        }
-        .header-call-btn:hover {
-            transform: scale(1.05);
+            color: #d1d5db;
         }
 
         .container { 
@@ -97,7 +127,7 @@
             color: #ffcc00;
             font-size: 22px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 10px;
             margin-bottom: 15px;
         }
         .image-gallery {
@@ -211,13 +241,6 @@
         }
 
         @media (max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-            .header-title {
-                text-align: center;
-            }
             .floating-btn {
                 width: 52px;
                 height: 52px;
@@ -232,30 +255,30 @@
 </head>
 <body>
 
-<!-- الهيدر الثابت مع زر الاتصال -->
-<header>
-    <div class="header-title">
-        <h1>تفصيل مغاسل رخام بالرياض مودرن وفخمة</h1>
-        <p>مؤسسة الجودة والفن للمقاولات العامة | تفصيل حسب المقاسات والطلب</p>
-    </div>
-    <a href="tel:0563645006" class="header-call-btn">
-        📞 اتصل الآن: 0563645006
+<!-- شريط علوي نحيف للرقم والاتصال السريع -->
+<div class="top-bar">
+    <span class="top-bar-brand">مؤسسة الجودة والفن</span>
+    <a href="tel:0563645006" class="top-bar-call">
+        📞 0563645006
     </a>
+</div>
+
+<!-- الهيدر الرئيسي (الشعار، صورة الغلاف والعنوان) -->
+<header>
+    <div class="header-content">
+        <!-- استبدل 'logo.png' باسم ملف الشعار الخاص بك -->
+        <img src="logo.png" alt="شعار المؤسسة" class="logo-img">
+        <!-- استبدل 'cover.png' باسم صورة الغلاف المفضلة لديك أو إحدى الصور الموجودة -->
+        <img src="Hh9.png" alt="صورة غلاف مغاسل رخام" class="cover-img">
+        <div>
+            <h1>تفصيل مغاسل رخام بالرياض مودرن وفخمة</h1>
+            <p>مؤسسة الجودة والفن للمقاولات العامة | تفصيل حسب المقاسات والطلب</p>
+        </div>
+    </div>
 </header>
 
 <div class="container">
-    <h2>أفضل ورشة تفصيل مغاسل رخام بالرياض</h2>
-    <p>تبحث عن التميز والفخامة لمنزلك؟ نحن في <strong>مؤسسة الجودة والفن للمقاولات العامة</strong> (بإدارة / أحمد محمد محمود حسين) متخصصون في <strong>تفصيل مغاسل رخام بالرياض</strong> بأحدث التصاميم العصرية (المودرن) والكلاسيكية التي تناسب الفلل، القصور، والمجالس الفاخرة.</p>
-
-    <h2>لماذا تختار مغاسل الرخام من مؤسستنا؟</h2>
-    <ul>
-      <li><strong>تصاميم عصرية وفخمة:</strong> تنفيذاً لأحدث صيحات الديكور الداخلي التي تضفي لمسة جمالية راقية على الحمامات والمداخل.</li>
-      <li><strong>رخام طبيعي وصناعي عالي الجودة:</strong> نستخدم أفضل أنواع الرخام المقاوم للرطوبة وسهل التنظيف لضمان الاستدامة على المدى الطويل.</li>
-      <li><strong>تفصيل حسب المقاسات بدقة:</strong> تفصيل مباشر يناسب كافة المساحات والمقاسات المطلوبة وبدون أي هدر في المواد.</li>
-      <li><strong>أسعار تنافسية وضمان شامل:</strong> نقدم أفضل الأسعار في الرياض مع الالتزام التام بالمواعيد والتشطيب الفندقي الفاخر.</li>
-    </ul>
-
-    <!-- معرض صور مغاسل الرخام -->
+    <!-- معرض صور أعمالنا يظهر في البداية -->
     <h2 class="gallery-title">معرض أحدث أعمالنا في تفصيل المغاسل</h2>
     <div class="image-gallery">
         <div class="gallery-item"><img src="Hh9.png" alt="مغسلة رخام فخمة بالرياض 1"></div>
@@ -268,6 +291,17 @@
         <div class="gallery-item"><img src="Hh2.png" alt="تفصيل مغاسل فخمة بالرياض 8"></div>
         <div class="gallery-item"><img src="Hh1.webp" alt="مغسلة رخام مودرن فاخرة 9"></div>
     </div>
+
+    <h2>أفضل ورشة تفصيل مغاسل رخام بالرياض</h2>
+    <p>تبحث عن التميز والفخامة لمنزلك؟ نحن في <strong>مؤسسة الجودة والفن للمقاولات العامة</strong> (بإدارة / أحمد محمد محمود حسين) متخصصون في <strong>تفصيل مغاسل رخام بالرياض</strong> بأحدث التصاميم العصرية (المودرن) والكلاسيكية التي تناسب الفلل، القصور، والمجالس الفاخرة.</p>
+
+    <h2>لماذا تختار مغاسل الرخام من مؤسستنا؟</h2>
+    <ul>
+      <li><strong>تصاميم عصرية وفخمة:</strong> تنفيذاً لأحدث صيحات الديكور الداخلي التي تضفي لمسة جمالية راقية على الحمامات والمداخل.</li>
+      <li><strong>رخام طبيعي وصناعي عالي الجودة:</strong> نستخدم أفضل أنواع الرخام المقاوم للرطوبة وسهل التنظيف لضمان الاستدامة على المدى الطويل.</li>
+      <li><strong>تفصيل حسب المقاسات بدقة:</strong> تفصيل مباشر يناسب كافة المساحات والمقاسات المطلوبة وبدون أي هدر في المواد.</li>
+      <li><strong>أسعار تنافسية وضمان شامل:</strong> نقدم أفضل الأسعار في الرياض مع الالتزام التام بالمواعيد والتشطيب الفندقي الفاخر.</li>
+    </ul>
 
     <div class="cta-box">
         <a href="tel:0563645006" class="btn-call">📞 اتصل الآن: 0563645006</a>
