@@ -6,25 +6,241 @@
     <title>تفصيل مغاسل رخام بالرياض مودرن وفخمة | مؤسسة الجودة والفن</title>
     <meta name="description" content="أفضل ورشة تفصيل مغاسل رخام بالرياض. تصاميم مودرن وكلاسيكية للمغاسل المصنوعة من الرخام الطبيعي والصناعي بأسعار تنافسية وضمان الجودة العالية.">
     <meta name="keywords" content="تفصيل مغاسل رخام بالرياض, مغاسل رخام مودرن, مغاسل رخام صناعي وطبيعي, تفصيل مغاسل حمامات بالرياض, تصميم مغاسل فخمة, أسعار مغاسل الرخام, ورشة تفصيل رخام الرياض">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', Tahoma, sans-serif; background-color: #0b132b; color: #ffffff; margin: 0; padding: 0; direction: rtl; text-align: right; }
-        header { background: #1c2541; padding: 20px; text-align: center; border-bottom: 3px solid #ffcc00; }
-        h1 { color: #ffcc00; font-size: 24px; margin-bottom: 5px; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: #1c2541; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        h2 { color: #4cc9f0; font-size: 20px; border-bottom: 2px solid #4cc9f0; padding-bottom: 8px; margin-top: 30px; }
-        p, li { line-height: 1.8; font-size: 16px; color: #e0e0e0; }
-        ul { padding-right: 20px; }
-        .cta-box { text-align: center; margin-top: 30px; }
-        .btn-call { background: #ffcc00; color: #0b132b; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 30px; font-size: 18px; display: inline-block; margin: 10px; box-shadow: 0 4px 10px rgba(255,204,0,0.3); }
-        .btn-whatsapp { background: #25d366; color: #ffffff; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 30px; font-size: 18px; display: inline-block; margin: 10px; }
-        footer { text-align: center; padding: 20px; margin-top: 40px; background: #0b132b; color: #8d99ae; font-size: 14px; border-top: 1px solid #1c2541; }
+        * {
+            box-sizing: border-box;
+        }
+        body { 
+            font-family: 'Cairo', Tahoma, sans-serif; 
+            background-color: #0b132b; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 0; 
+            direction: rtl; 
+            text-align: right; 
+        }
+
+        /* الهيدر الثابت */
+        header { 
+            background: #1c2541; 
+            padding: 15px 20px; 
+            text-align: center; 
+            border-bottom: 3px solid #ffcc00; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .header-title {
+            text-align: right;
+        }
+        h1 { 
+            color: #ffcc00; 
+            font-size: 20px; 
+            margin: 0 0 5px 0; 
+        }
+        header p {
+            margin: 0;
+            font-size: 13px;
+            color: #d1d5db;
+        }
+        .header-call-btn {
+            background: #ffcc00;
+            color: #0b132b;
+            padding: 8px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(255,204,0,0.4);
+            transition: transform 0.2s;
+        }
+        .header-call-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: #1c2541; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+        }
+        h2 { 
+            color: #4cc9f0; 
+            font-size: 20px; 
+            border-bottom: 2px solid #4cc9f0; 
+            padding-bottom: 8px; 
+            margin-top: 30px; 
+        }
+        p, li { 
+            line-height: 1.8; 
+            font-size: 16px; 
+            color: #e0e0e0; 
+        }
+        ul { 
+            padding-right: 20px; 
+        }
+
+        /* معرض الصور */
+        .gallery-title {
+            color: #ffcc00;
+            font-size: 22px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #2a3a5e;
+            background: #0b132b;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: #ffcc00;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cta-box { 
+            text-align: center; 
+            margin-top: 30px; 
+        }
+        .btn-call { 
+            background: #ffcc00; 
+            color: #0b132b; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 30px; 
+            font-size: 18px; 
+            display: inline-block; 
+            margin: 10px; 
+            box-shadow: 0 4px 10px rgba(255,204,0,0.3); 
+        }
+        .btn-whatsapp { 
+            background: #25d366; 
+            color: #ffffff; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 30px; 
+            font-size: 18px; 
+            display: inline-block; 
+            margin: 10px; 
+        }
+
+        /* الأزرار العائمة */
+        .floating-btn {
+            position: fixed;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+        .floating-btn svg {
+            width: 34px;
+            height: 34px;
+            fill: #ffffff;
+        }
+
+        /* زر واتساب عائم - يمين مع الاهتزاز */
+        .float-whatsapp {
+            right: 20px;
+            background-color: #25D366;
+            animation: shake 3s infinite ease-in-out;
+        }
+
+        /* زر اتصال عائم - يسار */
+        .float-phone {
+            left: 20px;
+            background-color: #007bff;
+        }
+
+        /* انيميشن اهتزاز بسيط للواتساب */
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(12deg); }
+            15% { transform: rotate(-12deg); }
+            20% { transform: rotate(10deg); }
+            25% { transform: rotate(-10deg); }
+            30% { transform: rotate(0deg); }
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px; 
+            background: #0b132b; 
+            color: #8d99ae; 
+            font-size: 14px; 
+            border-top: 1px solid #1c2541; 
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+            .header-title {
+                text-align: center;
+            }
+            .floating-btn {
+                width: 52px;
+                height: 52px;
+                bottom: 20px;
+            }
+            .floating-btn svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
     </style>
 </head>
 <body>
 
+<!-- الهيدر الثابت مع زر الاتصال -->
 <header>
-    <h1>تفصيل مغاسل رخام بالرياض مودرن وفخمة</h1>
-    <p>مؤسسة الجودة والفن للمقاولات العامة | تفصيل حسب المقاسات والطلب</p>
+    <div class="header-title">
+        <h1>تفصيل مغاسل رخام بالرياض مودرن وفخمة</h1>
+        <p>مؤسسة الجودة والفن للمقاولات العامة | تفصيل حسب المقاسات والطلب</p>
+    </div>
+    <a href="tel:0563645006" class="header-call-btn">
+        📞 اتصل الآن: 0563645006
+    </a>
 </header>
 
 <div class="container">
@@ -39,11 +255,39 @@
       <li><strong>أسعار تنافسية وضمان شامل:</strong> نقدم أفضل الأسعار في الرياض مع الالتزام التام بالمواعيد والتشطيب الفندقي الفاخر.</li>
     </ul>
 
+    <!-- معرض صور مغاسل الرخام -->
+    <h2 class="gallery-title">معرض أحدث أعمالنا في تفصيل المغاسل</h2>
+    <div class="image-gallery">
+        <div class="gallery-item"><img src="Hh9.png" alt="مغسلة رخام فخمة بالرياض 1"></div>
+        <div class="gallery-item"><img src="Hh8.png" alt="مغسلة رخام مودرن 2"></div>
+        <div class="gallery-item"><img src="Hh7.png" alt="تفصيل مغسلة رخام 3"></div>
+        <div class="gallery-item"><img src="Hh6.png" alt="تصميم مغاسل رخام بالرياض 4"></div>
+        <div class="gallery-item"><img src="Hh5.png" alt="مغاسل حمامات رخام 5"></div>
+        <div class="gallery-item"><img src="Hh4.png" alt="مغسلة رخام صناعي وطبيعي 6"></div>
+        <div class="gallery-item"><img src="Hh3.webp" alt="تصميم مغسلة رخام فندقية 7"></div>
+        <div class="gallery-item"><img src="Hh2.png" alt="تفصيل مغاسل فخمة بالرياض 8"></div>
+        <div class="gallery-item"><img src="Hh1.webp" alt="مغسلة رخام مودرن فاخرة 9"></div>
+    </div>
+
     <div class="cta-box">
         <a href="tel:0563645006" class="btn-call">📞 اتصل الآن: 0563645006</a>
         <a href="https://wa.me/966563645006" class="btn-whatsapp">💬 واتساب مباشر</a>
     </div>
 </div>
+
+<!-- زر واتساب عائم - يمين (مع اهتزاز) -->
+<a href="https://wa.me/966563645006" class="floating-btn float-whatsapp" target="_blank" aria-label="تواصل معنا عبر واتساب">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18.1-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18.1-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+</a>
+
+<!-- زر اتصال عائم - يسار -->
+<a href="tel:0563645006" class="floating-btn float-phone" aria-label="اتصل بنا الآن">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M164.9 24c-12.3 0-23.7 6.6-30 17.3l-48 80c-6.6 11-6 24.8 1.5 35.2l70.1 98.1c-13.2 19.8-28.9 38-46.8 54.3-17.3 15.7-36.4 29.5-56.9 41.1l-92.4-71.8c-10.6-8.2-25.1-9-36.5-2.1l-80 48C17.3 329.8 10 341.8 10 355c0 102.6 83.2 185.8 185.8 185.8 12.1 0 24.2-.8 36.3-2.4 140.7-18.6 250.9-128.8 269.5-269.5 1.6-12.1 2.4-24.2 2.4-36.3C504 129.2 420.8 46 318.2 46c-13.2 0-25.2 7.3-30.9 19.1l-48 80c-6.9 11.4-6.1 25.9 2.1 36.5l71.8 92.4c-11.6 20.5-25.4 39.6-41.1 56.9-16.3 17.9-34.5 33.6-54.3 46.8l-98.1-70.1c-10.4-7.5-24.2-8.1-35.2-1.5l-80 48C21.4 353.4 14.8 364.8 14.8 377.1z"/>
+    </svg>
+</a>
 
 <footer>
     جميع الحقوق محفوظة © 2026 - مؤسسة الجودة والفن للمقاولات العامة (بإدارة / أحمد محمد محمود حسين)
