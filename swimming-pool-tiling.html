@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة تبليط مسابح - أفضل خدمات تركيب سيراميك وموزاييك المسابح</title>
+    <!-- أقوى الكلمات المفتاحية للسيو -->
+    <meta name="keywords" content="تبليط مسابح, شركة تبليط مسابح, مقاول تبليط مسابح, تركيب سيراميك مسابح, تبليط حوض السباحة, موزاييك مسابح, عزل ومساهل مسابح, تجديد مسابح, فني تبليط مسابح, صيانة مسابح">
+    <meta name="description" content="أفضل شركة تبليط مسابح لتقديم خدمات تركيب السيراميك والموزاييك، عزل وترميم أحواض السباحة بأعلى جودة وأفضل الأسعار. اتصل الآن!">
+    
+    <!-- خطوط جوجل وفونت أوسوم للأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --secondary-color: #0369a1;
+            --accent-color: #38bdf8;
+            --whatsapp-color: #25D366;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --text-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth; /* لتفعيل التنقل السلس للأقسام */
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* الهيدر العلوي النحيف والثابت مع رقم التليفون المصحح */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--dark-color);
+            color: #fff;
+            padding: 6px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .top-bar .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .top-bar .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .top-bar .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .top-bar .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-color);
+            padding: 2px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .top-bar .contact-info a:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .top-bar .nav-links {
+                display: none; /* إخفاء الروابط في الشاشات الصغيرة جداً حفاظاً على التنسيق النحيف */
+            }
+            .top-bar {
+                justify-content: center;
+            }
+        }
+
+        /* الهيدر الرئيسي */
+        header.hero {
+            background: linear-gradient(rgba(2, 132, 199, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 90vh;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* الأزرار العامة */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* الأقسام العامة */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 50px;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* قسم الخدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card i.icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .section-btn {
+            margin-top: 15px;
+            background-color: var(--dark-color);
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .section-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* مميزاتنا */
+        .features {
+            background-color: #e2e8f0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* زر الواتساب العائم بتصميم التطبيق مع اهتزاز وإضاءة */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse-glow 2s infinite, subtle-shake 3s infinite;
+        }
+
+        /* تأثير الإضاءة النبضية */
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* تأثير الاهتزاز البسيط */
+        @keyframes subtle-shake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 20% { transform: rotate(-8deg); }
+            30%, 50%, 70% { transform: rotate(8deg); }
+            40%, 60% { transform: rotate(-8deg); }
+            80% { transform: rotate(0deg); }
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر العلوي النحيف برقم الهاتف الجديد (0563645006) وروابط الأقسام -->
+    <div class="top-bar">
+        <ul class="nav-links">
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#tiling-section">تبليط المسابح</a></li>
+            <li><a href="#features">المميزات</a></li>
+        </ul>
+        <div class="contact-info">
+            <a href="tel:0563645006">
+                <i class="fa-solid fa-phone"></i> 0563645006
+            </a>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي (Hero Section) -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>أفضل شركة تبليط مسابح وعزل أحواض السباحة</h1>
+            <p>نقدم لك خدمات تركيب سيراميك وموزاييك المسابح بأحدث التقنيات وأجود المواد المضادة للتسرب مع ضمان شامل.</p>
+            <a href="tel:0563645006" class="btn">
+                <i class="fa-solid fa-phone-volume"></i> احصل على استشارة مجانية واتصل الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- قسم الخدمات الأساسي -->
+    <section id="services">
+        <h2 class="section-title">خدماتنا المتميزة في المسابح</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-water-ladder icon"></i>
+                    <h3>تبليط أحواض السباحة</h3>
+                    <p>تركيب السيراميك والبورسلين المخصص للمسابح بدقة عالية لضمان عدم التسرب ومقاومة مواد التعقيم.</p>
+                </div>
+                <a href="tel:0563645006" class="btn section-btn">
+                    <i class="fa-solid fa-phone"></i> اطلب الخدمة
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-border-all icon"></i>
+                    <h3>تركيب موزاييك مسابح</h3>
+                    <p>تصميمات عصرية ومبتكرة من الموزاييك الفاخر الذي يمنح مسبحك مظهراً جمالياً ساحراً وفريداً من نوعه.</p>
+                </div>
+                <a href="tel:0563645006" class="btn section-btn">
+                    <i class="fa-solid fa-phone"></i> اطلب الخدمة
+                </a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <i class="fa-solid fa-shield-halved icon"></i>
+                    <h3>العزل المائي للمسابح</h3>
+                    <p>تنفيذ أحدث طبقات العزل المائي المحترف تحت البلاط لحماية هيكل المسبح ومنع أي تسربات مائية مستقبلية.</p>
+                </div>
+                <a href="tel:0563645006" class="btn section-btn">
+                    <i class="fa-solid fa-phone"></i> اطلب الخدمة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تبليط المسابح (المحدد بالضغط من الهيدر) -->
+    <section id="tiling-section" style="background-color: #f1f5f9;">
+        <h2 class="section-title">قسم تبليط المسابح الاحترافي</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; margin-bottom: 25px; color: #475569;">
+                نحن متخصصون في تنفيذ أعمال تبليط المسابح بأحدث الأساليب الهندسيّة والمواد المعتمدة عالمياً. سواء كنت تبحث عن تبليط مسبح منزلي، استراحة، أو نادي رياضي، فإن فريقنا جاهز لتنفيذ طلبك بأعلى معايير الدقة والسرعة.
+            </p>
+            <a href="tel:0563645006" class="btn" style="background-color: var(--dark-color);">
+                <i class="fa-solid fa-phone"></i> تواصل مع مقاول تبليط المسابح مباشرة
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="features">
+        <h2 class="section-title">لماذا تختارنا لتبليط مسبحك؟</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fa-solid fa-medal"></i>
+                <h3>خبرة طويلة</h3>
+                <p>سنوات طويلة من التميز في مجال إنشاء وتصميم وتبليط المسابح بمختلف أنواعها.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-gem"></i>
+                <h3>مواد عالية الجودة</h3>
+                <p>نستخدم أجود أنواع الغراء والمواد المقاومة للضغط والكلور لضمان ثبات البلاط للأبد.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-clock"></i>
+                <h3>سرعة في الإنجاز</h3>
+                <p>نلتزم بتسليم المشاريع في الأوقات المحددة وبأعلى معايير الجودة والإتقان.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- زر الواتساب العائم الدائري بتصميم تطبيق -->
+    <a href="https://wa.me/966563645006" class="whatsapp-float" target="_blank" aria-label="تواصل عبر الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 | خدمات تبليط وعزل المسابح الاحترافية. للتواصل السريع: 0563645006</p>
+    </footer>
+
+</body>
+</html>
