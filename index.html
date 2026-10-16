@@ -39,6 +39,12 @@
         .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #fbbf24; background: #fff; padding: 2px; }
         .logo { font-size: 18px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 10px; }
+        
+        /* روابط القائمة الرئيسية في الهيدر */
+        .main-menu { display: flex; gap: 15px; list-style: none; align-items: center; }
+        .main-menu a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: bold; transition: 0.3s; }
+        .main-menu a:hover { color: #f59e0b; }
+
         .btn-call-head { background: #facc15; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 900; font-size: 14px; box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3); transition: 0.3s; }
         .btn-call-head:hover { background: #eab308; }
 
@@ -168,6 +174,15 @@
                 <span>تخصص تفصيل مغاسل ورخام وسيراميك وبلاط بالرياض</span>
             </div>
         </div>
+        
+        <!-- روابط القائمة الرئيسية المضافة (من نحن، الخدمات، أعمالنا، اتصل بنا) -->
+        <ul class="main-menu">
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#works">أعمالنا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+
         <a href="tel:0563645006" class="btn-call-head"><i class="fa-solid fa-phone"></i> 0563645006</a>
     </header>
 
@@ -191,7 +206,7 @@
     </nav>
 
     <!-- واجهة البداية (Hero Section) -->
-    <section class="hero">
+    <section class="hero" id="home">
         <span class="badge">⭐ المركز الأول في تفصيل المغاسل والرخام والسيراميك والتبليط بالرياض</span>
         <h1>أفضل ورشة تفصيل مغاسل رخام بالرياض <br><span>معلم رخام، مبلط سيراميك، ومعلم بلاط محترف</span></h1>
         <p>مرحباً بك في **مؤسسة الجودة والفن للمقاولات العامة** (بإدارة / أحمد محمد محمود حسين). نوفر لك أمهر **مبلط سيراميك بالرياض** و**أفضل مبلط بالرياض** و**معلم بلاط** محترف لتنفيذ جميع أعمال تركيب السيراميك، البورسلان، والبلاط، إضافة إلى **تفصيل مغاسل رخام مودرن وصناعي** بضمان الجودة والدقة الهندسية العالية.</p>
@@ -201,6 +216,28 @@
         </div>
     </section>
 
+    <!-- قسم من نحن -->
+    <div class="container" id="about">
+        <div class="section-card">
+            <h2><span class="num">✦</span> من نحن</h2>
+            <p>نحن <strong>مؤسسة الجودة والفن للمقاولات العامة</strong> (بإدارة / أحمد محمد محمود حسين)، نُعد الرواد في مجال تفصيل مغاسل الرخام الفاخرة، وتركيب السيراميك، والبورسلان، والبلاط بمدينة الرياض. نفتخر بتقديم أعلى معايير الجودة والدقة الهندسية في جميع أعمالنا لنلبي تطلعات عملائنا ونكسب ثقتهم الدائمة.</p>
+        </div>
+    </div>
+
+    <!-- قسم خدماتنا -->
+    <div class="container" id="services">
+        <div class="section-card">
+            <h2><span class="num">✦</span> خدماتنا الأساسية</h2>
+            <p>نقدم باقة متكاملة من خدمات المقاولات والتشطيبات الفندقية بالرياض:</p>
+            <ul>
+                <li>تفصيل وتصميم مغاسل الرخام الطبيعي والصناعي والمودرن بدقة عالية.</li>
+                <li>تركيب السيراميك والبورسلان والبلاط للأرضيات والجدران بالليزر.</li>
+                <li>تركيب وجلي وتلميع رخام الدرج والسلالم والواجهات.</li>
+                <li>تنفيذ أسطح المطابخ والديكورات الرخامية المتكاملة.</li>
+            </ul>
+        </div>
+    </div>
+
     <main class="container">
 
         <!-- محرك البحث السريع -->
@@ -209,8 +246,8 @@
         </div>
 
         <!-- معرض الصور الأصلي الخاص بموقعك w5.png و x1.png ... -->
-        <div class="section-card">
-            <h2>معرض أعمال وتصاميم مؤسسة الجودة والفن للمقاولات العامة بالرياض</h2>
+        <div class="section-card" id="works">
+            <h2>معرض أعمال وتصاميم مؤسسة الجودة والفن للمقاولات العامة بالرياض (أعمالنا)</h2>
             <img src="w5.png" alt="تفصيل مغاسل رخام ومعلم سيراميك وبلاط بالرياض" class="section-main-img">
             <p>استعرض سابقة أعمالنا في تركيب السيراميك والبورسلان والبلاط وتفصيل مغاسل الرخام الطبيعي والصناعي المودرن بأعلى جودة:</p>
             <div class="gallery-grid">
@@ -493,6 +530,17 @@
         </div>
 
     </main>
+
+    <!-- قسم اتصل بنا -->
+    <div class="container" id="contact">
+        <div class="section-card" style="text-align: center;">
+            <h2><span class="num">✦</span> اتصل بنا</h2>
+            <p>يسعدنا تواصلكم معنا على مدار الساعة للاستفسارات وطلب الخدمات:</p>
+            <p style="font-size: 20px; font-weight: bold; color: #f59e0b; margin-top: 10px;">
+                <i class="fa-solid fa-phone"></i> <a href="tel:0563645006" style="color: inherit; text-decoration: none;">0563645006</a>
+            </p>
+        </div>
+    </div>
 
     <footer>
         <img src="w5.png" alt="مؤسسة الجودة والفن للمقاولات العامة لتفصيل المغاسل والرخام" class="footer-logo">
