@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفصيل مغاسل رخام حسب الطلب - السندال</title>
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* الشريط العلوي */
+        .top-bar {
+            background-color: #2b9388;
+            color: #fff;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* الهيدر الرئيسي */
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            color: #b89758;
+        }
+
+        .logo span {
+            font-size: 11px;
+            color: #777;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 10px;
+        }
+
+        /* مسار الصفحة */
+        .breadcrumb {
+            padding: 12px 20px;
+            font-size: 12px;
+            color: #666;
+            background-color: #fff;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .product-title-container {
+            padding: 10px 20px;
+            background-color: #fff;
+        }
+
+        .product-title-container h1 {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* معرض الصور */
+        .product-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .main-image-box {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .main-image-box img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .discount-tag {
+            position: absolute;
+            top: 15px;
+            right: 0;
+            background-color: #e74c3c;
+            color: white;
+            padding: 6px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        /* الصور المصغرة */
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            justify-content: space-between;
+        }
+
+        .thumb {
+            width: 22%;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        .thumb.active, .thumb:hover {
+            border-color: #2b9388;
+            opacity: 1;
+        }
+
+        /* التفاصيل والزر */
+        .product-details {
+            background-color: #fff;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .product-details h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #b89758;
+        }
+
+        .product-details ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .product-details li {
+            font-size: 14px;
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px #eee solid;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .whatsapp-btn, .call-btn {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .call-btn {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. الشريط العلوي -->
+    <div class="top-bar">
+        خصومات اليوم الوطني على جميع المنتجات + توصيل سريع لكل المناطق
+    </div>
+
+    <!-- 2. الهيدر -->
+    <header class="main-header">
+        <div class="header-icons">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="logo">
+            <h2>السندال للرخام</h2>
+            <span>تفصيل مغاسل الرخام</span>
+        </div>
+        <div class="header-icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. مسار الصفحة -->
+    <nav class="breadcrumb">
+        <a href="index.html">الرئيسية</a> &gt; 
+        <a href="sinks.html">المغاسل</a> &gt; 
+        <span>تفصيل مغاسل حسب الطلب</span>
+    </nav>
+
+    <!-- 4. العنوان الرئيسي -->
+    <div class="product-title-container">
+        <h1>تفصيل مغاسل حسب الطلب رخام صناعي وطبيعي - مقاسات متعددة</h1>
+    </div>
+
+    <!-- 5. المعرض والتفاصيل -->
+    <main class="product-container">
+        <div class="image-gallery">
+            <div class="main-image-box">
+                <span class="discount-tag">مخفض لفترة محدودة</span>
+                <!-- تقدر تستخدم صورك المرفوعة مثل x1.png أو Hh1.webp -->
+                <img id="current-img" src="x1.png" alt="مغسلة رخام">
+            </div>
+
+            <!-- الصور المصغرة (ربطتها بالصور المرفوعة عندك في الصفحة) -->
+            <div class="thumbnails">
+                <img class="thumb active" src="x1.png" onclick="changeImage(this)">
+                <img class="thumb" src="x2.jpg" onclick="changeImage(this)">
+                <img class="thumb" src="x3.jpg" onclick="changeImage(this)">
+                <img class="thumb" src="x4.jpg" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h3>تفاصيل الخدمة:</h3>
+            <ul>
+                <li>تفصيل ومقاسات خاصة حسب رغبة العميل.</li>
+                <li>رخام صناعي وطبيعي مقاوم للماء والحرارة.</li>
+                <li>تشطيب عالي الجودة مع مرايا ليد وديكورات.</li>
+                <li>معاينة وتوصيل وتركيب دقيق بالرياض.</li>
+            </ul>
+
+            <div class="action-buttons">
+                <a href="https://wa.me/966563645006?text=السلام%20عليهم،%20أرغب%20في%20الاستفسار%20عن%20تفصيل%20مغسلة%20رخام" target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+                <a href="tel:0563645006" class="call-btn">
+                    <i class="fa-solid fa-phone"></i> اتصال مباشر (0563645006)
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('current-img').src = element.src;
+            let thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
