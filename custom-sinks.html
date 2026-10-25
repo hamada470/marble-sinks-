@@ -18,7 +18,7 @@
         body {
             background-color: #f9f9f9;
             color: #333;
-            padding-bottom: 90px; /* مسافة متوافقة مع الأزرار العائمة */
+            padding-bottom: 90px;
         }
 
         /* الشريط العلوي */
@@ -80,14 +80,47 @@
         /* مسار الصفحة */
         .breadcrumb {
             padding: 12px 20px;
-            font-size: 12px;
+            font-size: 13px;
             color: #666;
             background-color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .breadcrumb a {
             color: #666;
             text-decoration: none;
+        }
+
+        /* زر المغاسل البارز الجديد مع الصورة */
+        .breadcrumb-sink-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2b9388, #1f6f65);
+            color: #fff !important;
+            padding: 6px 14px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 13px;
+            text-decoration: none;
+            box-shadow: 0 3px 8px rgba(43, 147, 136, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .breadcrumb-sink-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(43, 147, 136, 0.4);
+        }
+
+        .breadcrumb-sink-btn img {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
         }
 
         .product-title-container {
@@ -282,7 +315,7 @@
             font-size: 24px;
         }
 
-        /* زر الواتساب الضخم والكبير على اليسار (أيقونة التطبيق) */
+        /* زر الواتساب الضخم على اليسار */
         .floating-whatsapp {
             left: 20px;
             width: 75px;
@@ -333,10 +366,13 @@
         </div>
     </header>
 
-    <!-- 3. مسار الصفحة -->
+    <!-- 3. مسار الصفحة مع زر المغاسل البارز والصورة -->
     <nav class="breadcrumb">
         <a href="index.html">الرئيسية</a> &gt; 
-        <a href="sinks.html">المغاسل</a> &gt; 
+        <a href="sinks.html" class="breadcrumb-sink-btn" title="عرض أعمال المغاسل">
+            <img src="x1.png" alt="مغاسل الرخام">
+            اضغط هنا لعرض أعمال المغاسل
+        </a> &gt; 
         <span>تفصيل مغاسل حسب الطلب</span>
     </nav>
 
@@ -411,7 +447,7 @@
                 تغطي خدماتنا مختلف مناطق المملكة، حيث نقدم أفضل خدمات <strong>مغاسل رخام بالرياض</strong>، وننفذ أرقص وأرقى <strong>احدث المغاسل الرخاميه</strong> لمختلف المساحات. يمكنك طلب <strong>مغاسل يد رخام</strong> ذات لمسات فنية راقية، كما نوفر خدمة <strong>تفصيل مغاسل رخام جدة</strong> و <strong>تفصيل مغاسل رخام في جدة</strong> بمستوى عالٍ من الاحترافية والالتزام بمواعيد التسليم.
             </p>
 
-            <h3>تمتع بأجمل وتحدث مغاسل الرخام</h3>
+            <h3>تمتع بأجمل وأحدث مغاسل الرخام</h3>
             <p>
                 نعتمد في تصنيعنا على أفضل أنواع <strong>الرخام الصناعي للمغاسل</strong> لضمان سهولة التنظيف والعمر الافتراضي الطويل. نسعى دائماً لابتكار <strong>مغاسل رخام جديده</strong> وتقديم <strong>اجمل مغاسل رخام</strong> تلبي طموحات عملائنا وتناسب الديكورات الكلاسيكية والحديثة. سواء كنت ترغب في <strong>مغاسل رخام وحده</strong> أو مغاسل مزدوجة، فإننا نضمن لك الحصول على منتج فريد يجمع بين الجودة العالية والسعر التنافسي.
             </p>
