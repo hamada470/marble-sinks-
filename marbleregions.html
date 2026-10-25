@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مغاسل رخام - متجرك</title>
+    <!-- استخدام Tailwind CSS لتنسيق سريع وعصري -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 1. الشريط العلوي الإعلاني -->
+    <div class="bg-emerald-700 text-white text-xs sm:text-sm py-2 px-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 mx-auto">
+            <span>عروض اليوم الوطني السعودي 96</span>
+            <span>|</span>
+            <span>لفترة محدودة</span>
+            <a href="#" class="bg-white text-emerald-800 px-3 py-1 rounded-full font-bold text-xs hover:bg-gray-100 transition">اطلب الآن</a>
+        </div>
+    </div>
+
+    <!-- 2. رأس الموقع (Header) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- اليمين: القائمة الجانبية وحساب المستخدم -->
+            <div class="flex items-center gap-4 text-gray-700 text-lg">
+                <button class="hover:text-emerald-700"><i class="fa-solid fa-bars"></i></button>
+                <button class="hover:text-emerald-700 hidden sm:block"><i class="fa-regular fa-user"></i></button>
+            </div>
+
+            <!-- المنتصف: الشعار (Logo) -->
+            <div class="flex items-center">
+                <div class="border-2 border-yellow-500 rounded-full p-1 w-12 h-12 flex items-center justify-center bg-yellow-100">
+                    <span class="text-xs font-bold text-blue-900 text-center">TOP 2</span>
+                </div>
+            </div>
+
+            <!-- اليسار: البحث، السلة، والمفضلة -->
+            <div class="flex items-center gap-3 text-gray-700 text-lg">
+                <button class="hover:text-emerald-700"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hover:text-emerald-700 relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <button class="hover:text-emerald-700"><i class="fa-regular fa-heart"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3 & 4. قسم العنوان الرئيسي (Hero Section بخلفية زرقاء) -->
+    <section class="bg-cyan-900 text-white py-10 px-4 text-center">
+        <div class="container mx-auto">
+            <!-- مسار التنقل Breadcrumb -->
+            <div class="text-xs sm:text-sm text-yellow-400 mb-4 flex justify-center items-center gap-2">
+                <a href="#" class="hover:underline">الرئيسية</a>
+                <span><i class="fa-solid fa-angle-left text-xs"></i></span>
+                <a href="#" class="hover:underline">مغاسل حمام</a>
+                <span><i class="fa-solid fa-angle-left text-xs"></i></span>
+                <span class="text-white">مغاسل رخام</span>
+            </div>
+            <!-- العنوان الرئيسي -->
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-wide">مغاسل رخام</h1>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي (القسم الأبيض) -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- 5. قسم العنوان الفرعي مع الإطار الأصفر الجانبي -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border-r-4 border-yellow-500 mb-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
+                أفضل مغاسل رخام للحمام بتصاميم فاخرة في السعودية
+            </h2>
+        </div>
+
+        <!-- 6. أدوات الفلترة والترتيب -->
+        <div class="bg-white p-4 rounded-xl shadow-sm mb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="w-full sm:w-auto flex items-center gap-2">
+                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-emerald-600">
+                    <option>12</option>
+                    <option>24</option>
+                    <option>36</option>
+                </select>
+            </div>
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-3">
+                <select class="border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-emerald-600 w-full sm:w-48">
+                    <option>ترتيب حسب الأحدث</option>
+                    <option>السعر: من الأقل للأعلى</option>
+                    <option>السعر: من الأعلى للأقل</option>
+                </select>
+                <button class="border border-gray-300 p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                    <i class="fa-solid fa-filter"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 7. شبكة المنتجات (Product Grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- منتج 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100 relative">
+                <div class="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded shadow z-10">
+                    متوفر بألوان
+                </div>
+                <div class="overflow-hidden bg-gray-100 h-64">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="مغسلة رخام" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">مغسلة رخام جدارية فاخرة</h3>
+                    <p class="text-emerald-700 font-bold">التفاصيل والأسعار</p>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100 relative">
+                <div class="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded shadow z-10">
+                    متوفر بألوان
+                </div>
+                <div class="overflow-hidden bg-gray-100 h-64">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80" alt="مغسلة رخام" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">مغسلة رخام مودرن مزدوجة</h3>
+                    <p class="text-emerald-700 font-bold">التفاصيل والأسعار</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
