@@ -32,7 +32,7 @@
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
-        body { background-color: #f8fafc; color: #1e293b; direction: rtl; text-align: right; line-height: 1.8; padding-bottom: 60px; }
+        body { background-color: #f8fafc; color: #1e293b; direction: rtl; text-align: right; line-height: 1.8; padding-bottom: 120px; }
         
         /* Navbar & Header */
         header { background: #0f172a; color: #fff; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #f59e0b; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
@@ -259,31 +259,10 @@
             </div>
         </div>
 
-        <!-- ================= ربط الموقعين: قسم أحدث مغاسل الرخام المضاف بنفس التنسيق القديم ================= -->
-        <div class="section-card" id="latest-marble-section" style="border: 2px dashed #b8860b; background: #fffdf4;">
-            <h2 style="color: #b8860b;"><span class="num">✨</span> قسم أحدث مغاسل الرخام وتفصيل المغاسل العصرية</h2>
-            <p>استعرض أحدث تصميمات <strong>مغاسل رخام</strong>، وخدمات <strong>تفصيل مغاسل رخام</strong>، و<strong>تفصيل مغاسل</strong>، بأعلى معايير الفخامة والجودة بالرياض وباقي مناطق المملكة:</p>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
-                <div style="flex: 1; min-width: 280px;">
-                    <img src="Hh9.png" alt="مغاسل رخام فاخرة" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; border: 2px solid #b8860b; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                </div>
-                <div style="flex: 1; min-width: 280px;">
-                    <h3 style="color: #0f172a; font-size: 1.3em; margin-bottom: 10px;">فخامة التصميم ودقة التنفيذ</h3>
-                    <p style="color: #475569; font-size: 14px; margin-bottom: 15px;">نقدم لك تشكيلة متكاملة من أحدث موديلات مغاسل الرخام الطبيعي والصناعي والمعلق بتصميمات هندسية فريدة ومخارج مياه مخفية.</p>
-                    <a href="marble-washbasins.html" style="display: inline-block; background: #b8860b; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3); transition: 0.3s;">
-                        ✨ الانتقال إلى صفحة مغاسل الرخام الكاملة &larr;
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- ================= نهاية قسم الربط ================= -->
-
         <!-- الأقسام الـ 15 كاملة ومفصلة -->
         <div class="section-card" id="sec1">
             <h2><span class="num">01</span> معلم تركيب سيراميك بالرياض (أرضيات والجدران)</h2>
             <p>نوفر لك أمهر **معلم تركيب سيراميك بالرياض** و**مبلط سيراميك الرياض** المتخصص في تركيب سيراميك الحمامات والمطابخ والصالات بأعلى درجات الدقة والاحترافية.</p>
-            <p>تُعد أعمال تركيب السيراميك والبورسلان الركيزة الأساسية في إبراز جمال وروعة أي عقار سكني أو تجاري، ولأن التفاصيل الصغيرة تصنع الفارق الكبير، فإن الاستعانة بـ <strong>معلم تركيب سيراميك</strong> محترف يمتلك الخبرة الميدانية الواسعة تضمن لك الحصول على أسطح مستوية خالية تماماً من العيوب والتطبيل.</p>
             <ul>
                 <li>طريقة تركيب سيراميك الأرضيات للجدران والأرضيات بدون فراغات أو تطبيل.</li>
                 <li>توزيع الميول الصحيحة باتجاه صفيات التصريف.</li>
@@ -395,7 +374,7 @@
             </div>
         </section>
 
-        <!-- الأزرار التخصصية المباشرة للأقسام -->
+        <!-- الأزرار التخصصية المباشرة للأقسام (مضاف إليها زر أحدث المغاسل في المنتصف) -->
         <div class="services-nav-container">
             <h3 style="color: #0f172a; font-size: 18px; font-weight: bold; margin-bottom: 5px;">استعرض أعمالنا التخصصية بالرياض:</h3>
             
@@ -411,7 +390,12 @@
                 <i class="fa-solid fa-sink"></i> زور أعمالنا في مغاسل الرخام
             </a>
 
-            <a href="custom-sinks.html" class="service-link-btn" style="border-color: #b8860b; color: #b8860b;">
+            <!-- زر أحدث المغاسل المضاف في منتصف الأزرار -->
+            <a href="marble-washbasins.html" class="service-link-btn" style="border-color: #b8860b; color: #b8860b;">
+                <i class="fa-solid fa-sparkles"></i> زور أحدث المغاسل وتفصيلها الفاخر
+            </a>
+
+            <a href="custom-sinks.html" class="service-link-btn" style="border-color: #eab308; color: #eab308;">
                 <i class="fa-solid fa-pen-ruler"></i> تفصيل حسب الطلب
             </a>
 
