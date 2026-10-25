@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفصيل مغاسل رخام حسب الطلب - السندال</title>
+    <title>تفصيل مغاسل رخام حسب الطلب - مغاسل الرخام</title>
     <!-- FontAwesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -18,6 +18,7 @@
         body {
             background-color: #f9f9f9;
             color: #333;
+            padding-bottom: 90px; /* مسافة متوافقة مع الأزرار العائمة */
         }
 
         /* الشريط العلوي */
@@ -211,6 +212,99 @@
             background-color: #333;
             color: white;
         }
+
+        /* قسم المقال المضاف للـ SEO */
+        .seo-article-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .seo-article-section h2 {
+            color: #b89758;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2b9388;
+            padding-bottom: 8px;
+        }
+
+        .seo-article-section h3 {
+            color: #2b9388;
+            font-size: 17px;
+            margin: 18px 0 10px;
+        }
+
+        .seo-article-section p {
+            font-size: 14.5px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .seo-article-section ul {
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .seo-article-section li {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        /* الأزرار العائمة (Floating Buttons) */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* زر الاتصال على اليمين */
+        .floating-call {
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background-color: #2b9388;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        /* زر الواتساب الضخم والكبير على اليسار (أيقونة التطبيق) */
+        .floating-whatsapp {
+            left: 20px;
+            width: 75px;
+            height: 75px;
+            background-color: #25d366;
+            color: #ffffff;
+            font-size: 42px;
+            border: 3px solid #ffffff;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -227,7 +321,7 @@
             <i class="fa-solid fa-user"></i>
         </div>
         <div class="logo">
-            <h2>السندال للرخام</h2>
+            <h2>مغاسل الرخام</h2>
             <span>تفصيل مغاسل الرخام</span>
         </div>
         <div class="header-icons">
@@ -251,16 +345,14 @@
         <h1>تفصيل مغاسل حسب الطلب رخام صناعي وطبيعي - مقاسات متعددة</h1>
     </div>
 
-    <!-- 5. المعرض والتفاصيل -->
+    <!-- 5. المعرض والتفاصيل والمقال -->
     <main class="product-container">
         <div class="image-gallery">
             <div class="main-image-box">
                 <span class="discount-tag">مخفض لفترة محدودة</span>
-                <!-- تقدر تستخدم صورك المرفوعة مثل x1.png أو Hh1.webp -->
                 <img id="current-img" src="x1.png" alt="مغسلة رخام">
             </div>
 
-            <!-- الصور المصغرة (ربطتها بالصور المرفوعة عندك في الصفحة) -->
             <div class="thumbnails">
                 <img class="thumb active" src="x1.png" onclick="changeImage(this)">
                 <img class="thumb" src="x2.jpg" onclick="changeImage(this)">
@@ -287,7 +379,55 @@
                 </a>
             </div>
         </div>
+
+        <!-- 6. مقال SEO الاحترافي المدمج بالكلمات المفتاحية -->
+        <article class="seo-article-section">
+            <h2>دليل تفصيل مغاسل الرخام: اختيار مغاسل تفصيل رخام بأعلى جودة وأجمل التصاميم</h2>
+            <p>
+                تُعد عملية <strong>تفصيل مغاسل رخام</strong> واحدة من أهم الخطوات الأساسية لإضفاء لمسة فخامة وأناقة على ديكورات المنازل والفلل والمجالس. إن الاستثمار في <strong>مغاسل رخام</strong> مصممة خصيصاً يضمن لك الحصول على استغلال مثالي للمساحات مع الحصول على مظهر عصري يدوم لسنوات طويلة. نوفر لك في مصنعنا أفضل خدمات <strong>تفصيل مغاسل</strong> متكاملة تعتمد على أحدث التقنيات وأجود خامات <strong>رخام مغاسل</strong> المتوفرة في السوق.
+            </p>
+
+            <h3>لماذا تختار مغاسل رخام صناعي وطبيعي؟</h3>
+            <p>
+                تتميز <strong>مغاسل رخام صناعي</strong> بالصلابة العالية ومقاومتها الممتازة للبقع والرطوبة، مما يجعل <strong>تفصيل مغاسل رخام صناعي</strong> الخيار الأكثر طلباً في الآونة الأخيرة. كما يتوفر لدينا خيارات <strong>تفصيل رخام</strong> بأشكال هندسية متعددة تناسب كل الأذواق، سواء كنت تبحث عن <strong>رخام صناعي مغاسل</strong> للمنازل أو المنشآت التجارية. نسعى دائماً إلى تقديم <strong>مغاسل رخام تفصيل</strong> بأعلى معايير الدقة والسلامة، بدءاً من <strong>تفصيل رخام مغاسل</strong> وتجهيز التصاميم وحتى التركيب النهائي.
+            </p>
+
+            <h3>أنواع وتصميمات تفصيل المغاسل الحديثة</h3>
+            <p>
+                إذا كنت ترغب في <strong>تفصيل غسالات رخام</strong> أو <strong>تفصيل رخام صناعي</strong> لأي جزء من منزلك، فإننا نتيح لك تنوعاً كبيراً في التصاميم والخامات. تشمل خياراتنا اختيار <strong>رخام مغاسل صناعي</strong> فاخر، بالإضافة إلى <strong>مغاسل صناعي</strong> متعددة الألوان. نحن نهتم بكل تفاصيل <strong>تفصيل المغاسل</strong> لتلائم الاحتياجات المختلفة، ونوفر الاستشارات الفنية الدقيقة لتحديد <strong>مقاسات مغاسل الرخام</strong> المناسبة لمساحة حمامك أو مجلسك.
+            </p>
+            <ul>
+                <li>توفير <strong>رخام مغسلة</strong> فخم يتماشى مع أحدث ديكورات الحمامات.</li>
+                <li>تقديم أقوى <strong>عروض مغاسل رخام</strong> بأسعار تنافسية تناسب الجميع.</li>
+                <li>تصميم <strong>مغاسل رخام صغيرة</strong> تناسب المساحات الضيقة والمحدودة بكفاءة.</li>
+                <li>متابعة أحدث صيحات ديكور <strong>احدث مغاسل رخام</strong> وتطبيقها بدقة.</li>
+            </ul>
+
+            <h3>بيع مغاسل رخام وتفصيل مغاسل رخام بالرياض وجدة</h3>
+            <p>
+                نحن متخصصون في <strong>بيع مغاسل رخام</strong> وتصنيع <strong>غسالات رخام صناعي</strong> بمواصفات عالمية، حيث ندمج بين المتانة والأناقة. كما يمكنك اختيار إضافة <strong>مرايا ليد</strong> ساحرة تزيد من جمال المغسلة وتمنحك إضاءة متوازنة ومريحة. ولأن المجالس العربية تتطلب اهتماماً خاصاً، فإننا نوفر تصاميم مميزة تشمل <strong>مغاسل رجال رخام</strong> ضخمة وفخمة وتعكس كرم الضيافة.
+            </p>
+            <p>
+                تغطي خدماتنا مختلف مناطق المملكة، حيث نقدم أفضل خدمات <strong>مغاسل رخام بالرياض</strong>، وننفذ أرقص وأرقى <strong>احدث المغاسل الرخاميه</strong> لمختلف المساحات. يمكنك طلب <strong>مغاسل يد رخام</strong> ذات لمسات فنية راقية، كما نوفر خدمة <strong>تفصيل مغاسل رخام جدة</strong> و <strong>تفصيل مغاسل رخام في جدة</strong> بمستوى عالٍ من الاحترافية والالتزام بمواعيد التسليم.
+            </p>
+
+            <h3>تمتع بأجمل وتحدث مغاسل الرخام</h3>
+            <p>
+                نعتمد في تصنيعنا على أفضل أنواع <strong>الرخام الصناعي للمغاسل</strong> لضمان سهولة التنظيف والعمر الافتراضي الطويل. نسعى دائماً لابتكار <strong>مغاسل رخام جديده</strong> وتقديم <strong>اجمل مغاسل رخام</strong> تلبي طموحات عملائنا وتناسب الديكورات الكلاسيكية والحديثة. سواء كنت ترغب في <strong>مغاسل رخام وحده</strong> أو مغاسل مزدوجة، فإننا نضمن لك الحصول على منتج فريد يجمع بين الجودة العالية والسعر التنافسي.
+            </p>
+        </article>
     </main>
+
+    <!-- 7. الأزرار العائمة (Floating Buttons) -->
+    <!-- زر الاتصال على اليمين -->
+    <a href="tel:0563645006" class="floating-btn floating-call" title="اتصال مباشر">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- زر الواتساب الضخم على اليسار -->
+    <a href="https://wa.me/966563645006?text=السلام%20عليهم،%20أرغب%20في%20الاستفسار%20عن%20تفصيل%20مغسلة%20رخام" target="_blank" class="floating-btn floating-whatsapp" title="تواصل عبر الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         function changeImage(element) {
