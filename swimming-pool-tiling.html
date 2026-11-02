@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة تبليط مسابح - أفضل خدمات تركيب سيراميك وموزاييك المسابح</title>
     <!-- أقوى الكلمات المفتاحية للسيو -->
-    <meta name="keywords" content="تبليط مسابح, شركة تبليط مسابح, مقاول تبليط مسابح, تركيب سيراميك مسابح, تبليط حوض السباحة, موزاييك مسابح, عزل ومساهل مسابح, تجديد مسابح, فني تبليط مسابح, صيانة مسابح">
+    <meta name="keywords" content="تبليط مسابح, شركة تبليط مسابح, مقاول تبليط مسابح, تركيب سيراميك مسابح, تبليط حوض السباحة, موزاييك مسابح, عزل ومساهل مسابح, تجديد مسابح, فني تبليط مسابح, صيانة مسابح, افضل معلم تبليط مسابح, شركة عزل مسابح, مبلط مسابح بالرياض, ارخص شركة تبليط مسابح, تركيب سيراميك احواض سباحة">
     <meta name="description" content="أفضل شركة تبليط مسابح لتقديم خدمات تركيب السيراميك والموزاييك، عزل وترميم أحواض السباحة بأعلى جودة وأفضل الأسعار. اتصل الآن!">
     
     <!-- خطوط جوجل وفونت أوسوم للأيقونات -->
@@ -18,6 +18,7 @@
             --secondary-color: #0369a1;
             --accent-color: #38bdf8;
             --whatsapp-color: #25D366;
+            --call-color: #e11d48;
             --dark-color: #0f172a;
             --light-color: #f8fafc;
             --text-color: #334155;
@@ -253,11 +254,19 @@
             margin-bottom: 15px;
         }
 
-        /* زر الواتساب العائم بتصميم التطبيق مع اهتزاز وإضاءة */
-        .whatsapp-float {
+        /* حاوية الأزرار العائمة */
+        .floating-buttons {
             position: fixed;
             bottom: 30px;
             right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        /* زر الواتساب العائم بتصميم التطبيق مع اهتزاز وإضاءة */
+        .whatsapp-float {
             background-color: var(--whatsapp-color);
             color: white;
             width: 65px;
@@ -268,22 +277,38 @@
             justify-content: center;
             font-size: 35px;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
-            z-index: 1000;
             text-decoration: none;
-            animation: pulse-glow 2s infinite, subtle-shake 3s infinite;
+            animation: pulse-glow-wa 2s infinite, subtle-shake 3s infinite;
         }
 
-        /* تأثير الإضاءة النبضية */
-        @keyframes pulse-glow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+        /* زر الاتصال العائم العام */
+        .call-float {
+            background-color: var(--call-color);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(225, 29, 72, 0.6);
+            text-decoration: none;
+            animation: pulse-glow-call 2s infinite, subtle-shake 3s infinite 1.5s;
+        }
+
+        /* تأثير الإضاءة النبضية للواتساب */
+        @keyframes pulse-glow-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* تأثير الإضاءة النبضية للاتصال */
+        @keyframes pulse-glow-call {
+            0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(225, 29, 72, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
         }
 
         /* تأثير الاهتزاز البسيط */
@@ -306,6 +331,43 @@
         footer p {
             opacity: 0.8;
             font-size: 0.9rem;
+        }
+
+        /* تنسيقات المحتوى الموسع للسيو */
+        .seo-expanded-text {
+            text-align: right;
+            line-height: 1.9;
+            color: #334155;
+            font-size: 1.05rem;
+            margin-top: 25px;
+        }
+
+        .seo-expanded-text p {
+            margin-bottom: 20px;
+        }
+
+        .seo-expanded-text h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 25px 0 12px;
+            font-weight: 700;
+        }
+
+        .seo-keywords-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+            justify-content: center;
+        }
+
+        .seo-keywords-list span {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -345,6 +407,9 @@
                     <i class="fa-solid fa-water-ladder icon"></i>
                     <h3>تبليط أحواض السباحة</h3>
                     <p>تركيب السيراميك والبورسلين المخصص للمسابح بدقة عالية لضمان عدم التسرب ومقاومة مواد التعقيم.</p>
+                    <p class="seo-desc" style="font-size: 0.9rem; color: #475569; text-align: right; border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
+                        يقدم معلم تبليط مسابح محترف أفضل خدمات تركيب سيراميك مسابح، تركيب بلاط حوض السباحة، وتبليط مسابح الفلل والاستراحات بالرياض بكفاءة عالية وأحدث تقنيات الوزن والتركيب.
+                    </p>
                 </div>
                 <a href="tel:0563645006" class="btn section-btn">
                     <i class="fa-solid fa-phone"></i> اطلب الخدمة
@@ -356,6 +421,9 @@
                     <i class="fa-solid fa-border-all icon"></i>
                     <h3>تركيب موزاييك مسابح</h3>
                     <p>تصميمات عصرية ومبتكرة من الموزاييك الفاخر الذي يمنح مسبحك مظهراً جمالياً ساحراً وفريداً من نوعه.</p>
+                    <p class="seo-desc" style="font-size: 0.9rem; color: #475569; text-align: right; border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
+                        تخصصنا في تركيب موزاييك المسابح الزجاجي والإسباني بجميع الأشكال والألوان، مع استخدام أفضل غراء مسابح إبوكسي مقاوم للكلور والمياه المتبقية لضمان عمر افتراضي طويل.
+                    </p>
                 </div>
                 <a href="tel:0563645006" class="btn section-btn">
                     <i class="fa-solid fa-phone"></i> اطلب الخدمة
@@ -367,6 +435,9 @@
                     <i class="fa-solid fa-shield-halved icon"></i>
                     <h3>العزل المائي للمسابح</h3>
                     <p>تنفيذ أحدث طبقات العزل المائي المحترف تحت البلاط لحماية هيكل المسبح ومنع أي تسربات مائية مستقبلية.</p>
+                    <p class="seo-desc" style="font-size: 0.9rem; color: #475569; text-align: right; border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
+                        نعد افضل شركة عزل مسابح تقدم خدمات عزل ومساهل مسابح بالرياض باستخدام عزل الأبوكسي وعزل العزل المائي الكيميائي قبل تبليط المسبح لحمايته من التسربات الخطيرة.
+                    </p>
                 </div>
                 <a href="tel:0563645006" class="btn section-btn">
                     <i class="fa-solid fa-phone"></i> اطلب الخدمة
@@ -375,16 +446,63 @@
         </div>
     </section>
 
-    <!-- قسم تبليط المسابح (المحدد بالضغط من الهيدر) -->
+    <!-- قسم تبليط المسابح (المحدد بالضغط من الهيدر - تم توسيعه بأكثر من 30 سطراً و50+ كلمة مفتاحية) -->
     <section id="tiling-section" style="background-color: #f1f5f9;">
         <h2 class="section-title">قسم تبليط المسابح الاحترافي</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; margin-bottom: 25px; color: #475569;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <p style="font-size: 1.15rem; margin-bottom: 25px; color: #475569; text-align: center; font-weight: 600;">
                 نحن متخصصون في تنفيذ أعمال تبليط المسابح بأحدث الأساليب الهندسيّة والمواد المعتمدة عالمياً. سواء كنت تبحث عن تبليط مسبح منزلي، استراحة، أو نادي رياضي، فإن فريقنا جاهز لتنفيذ طلبك بأعلى معايير الدقة والسرعة.
             </p>
-            <a href="tel:0563645006" class="btn" style="background-color: var(--dark-color);">
-                <i class="fa-solid fa-phone"></i> تواصل مع مقاول تبليط المسابح مباشرة
-            </a>
+
+            <!-- محتوى السيو الموسع الشامل للكلمات المفتاحية المطلوبة -->
+            <div class="seo-expanded-text">
+                <h3>أفضل مقاول تبليط مسابح وفني تركيب سيراميك وموزاييك متمرس</h3>
+                <p>
+                    تعتبر عملية <strong>تبليط المسابح</strong> من أهم الخطوات التنفيذية التي تتطلب دقة متناهية وخبرة عريضة في مجال الديكورات والإنشاءات. إن الحصول على مسبح خالي من العيوب والتسريبات يبدأ باختيار <strong>شركة تبليط مسابح</strong> متخصصة تمتلك طاقم عمل محترف من أصحاب الكفاءات. نحن في <strong>شركة تبليط مسابح بالرياض</strong> نوفر لك أقوى <strong>مقاول تبليط مسابح</strong> وأفضل <strong>معلم تركيب سيراميك مسابح</strong> يضمن لك تطبيق كافة المعايير الهندسية الصارمة أثناء عملية التبليط والتثبيت.
+                </p>
+                <p>
+                    نقدم خدمات متكاملة تشتمل على <strong>تركيب سيراميك مسابح</strong>، <strong>تبليط حوض السباحة</strong>، و<strong>تركيب موزاييك مسابح</strong> بجميع قياساته وأنواعه سواء الموزاييك الزجاجي أو الموزاييك الكريستالي أو البورسلين المقاوم للحرارة والمواد الكيميائية. يقوم <strong>فني تبليط مسابح</strong> لدينا بدراسة ميل الأرضيات بدقة والتأكد من سلامة التمديدات قبل البدء في وضع <strong>بلاط مسابح</strong> جديد أو تنفيذ أعمال <strong>تجديد مسابح</strong> قديمة ومتهالكة.
+                </p>
+
+                <h3>خدمات العزل والتجليخ وصيانة أحواض السباحة</h3>
+                <p>
+                    لا تقتصر أعمالنا على التبليط فقط، بل نتميز بكوننا أفضل <strong>شركة عزل ومساهل مسابح</strong> تقدم حلولاً جذرياً لمنع تسرب المياه. تشمل خطوات العمل لدينا تجهيز جدران وأرضية المسبح عبر <strong>عزل مسابح</strong> بأجود مواد العزل المائي المعتمدة مثل الأبوكسي والعزل الأسمنتي لمنع تسرب المياه إلى الأساسات. بعد الانتهاء من العزل يتم تطبيق <strong>غراء تركيب سيراميك مسابح</strong> مخصص لمقاومة ضغط المياه والكلور والمواد الكيميائية المستعملة في تعقيم أحواض السباحة.
+                </p>
+                <p>
+                    إذا كنت تعاني من تساقط البلاط أو وجود فراغات بين السيراميك، فإننا نوفر خدمات <strong>ترميم مسابح</strong> و<strong>صيانة مسابح</strong> شاملة تشمل إعادة تعبئة الفواصل بمادة روبة إبوكسي معالجة ضد الفطريات والبكتيريا، مما يحافظ على مظهر المسبح ناصعاً ونظيفاً طوال العام. يعتمد <strong>مبلط مسابح شاطر</strong> لدينا على أحدث الليزرات لضمان استواء السطح وعدم وجود أجزاء حادة قد تضر بالسباحين.
+                </p>
+
+                <h3>لماذا نعد خيارك الأفضل لتبليط وصيانة المسابح بالرياض؟</h3>
+                <p>
+                    إن البحث عن <strong>أفضل مبلط بالرياض</strong> أو <strong>مبلط سيراميك ممتاز</strong> يتطلب التعامل مع مؤسسة رسمية تضمن لك جودة المواد والتنفيذ. نحن نضمن لك الحصول على <strong>ارخص اسعار تبليط المسابح</strong> دون المساومة على الجودة، مع تقديم ضمانات طويلة الأمد على كافة أعمال <strong>تركيب بلاط المسابح</strong> و<strong>عزل أحواض السباحة</strong>. كما نغطي كافة مناطق وضواحي الرياض ونوفر استشارات مجانية لكل من يرغب في تشطيب أو تجديد مسبحه الخاص.
+                </p>
+            </div>
+
+            <!-- الكلمات المفتاحية لمساعدة السيو -->
+            <div class="seo-keywords-list">
+                <span>تبليط مسابح</span>
+                <span>شركة تبليط مسابح</span>
+                <span>مقاول تبليط مسابح</span>
+                <span>تركيب سيراميك مسابح</span>
+                <span>تبليط حوض السباحة</span>
+                <span>موزاييك مسابح</span>
+                <span>عزل ومساهل مسابح</span>
+                <span>تجديد مسابح</span>
+                <span>فني تبليط مسابح</span>
+                <span>صيانة مسابح</span>
+                <span>معلم تبليط مسابح</span>
+                <span>مبلط سيراميك مسابح</span>
+                <span>مبلط مسابح بالرياض</span>
+                <span>افضل شركة تبليط مسابح</span>
+                <span>ترميم مسابح</span>
+                <span>عزل مسابح مائي</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 35px;">
+                <a href="tel:0563645006" class="btn" style="background-color: var(--dark-color);">
+                    <i class="fa-solid fa-phone"></i> تواصل مع مقاول تبليط المسابح مباشرة
+                </a>
+            </div>
         </div>
     </section>
 
@@ -396,24 +514,34 @@
                 <i class="fa-solid fa-medal"></i>
                 <h3>خبرة طويلة</h3>
                 <p>سنوات طويلة من التميز في مجال إنشاء وتصميم وتبليط المسابح بمختلف أنواعها.</p>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">تخصص متكامل في تركيب بلاط وموزاييك أحواض السباحة للفلل والمجمعات السكنية.</p>
             </div>
             <div class="feature-box">
                 <i class="fa-solid fa-gem"></i>
                 <h3>مواد عالية الجودة</h3>
                 <p>نستخدم أجود أنواع الغراء والمواد المقاومة للضغط والكلور لضمان ثبات البلاط للأبد.</p>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">عزل مائي معتمد وروبة إبوكسي مقاومة للتآكل والبكتيريا.</p>
             </div>
             <div class="feature-box">
                 <i class="fa-solid fa-clock"></i>
                 <h3>سرعة في الإنجاز</h3>
                 <p>نلتزم بتسليم المشاريع في الأوقات المحددة وبأعلى معايير الجودة والإتقان.</p>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">فريق فني متخصص ومجهّز لإنجاز التبليط والصيانة بأسلوب احترافي.</p>
             </div>
         </div>
     </section>
 
-    <!-- زر الواتساب العائم الدائري بتصميم تطبيق -->
-    <a href="https://wa.me/966563645006" class="whatsapp-float" target="_blank" aria-label="تواصل عبر الواتساب">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- حاوية الأزرار العائمة (زر الاتصال العام + زر الواتساب) -->
+    <div class="floating-buttons">
+        <!-- زر الاتصال العائم العام -->
+        <a href="tel:0563645006" class="call-float" aria-label="اتصل بنا الآن">
+            <i class="fa-solid fa-phone-volume"></i>
+        </a>
+        <!-- زر الواتساب العائم الدائري بتصميم تطبيق -->
+        <a href="https://wa.me/966563645006" class="whatsapp-float" target="_blank" aria-label="تواصل عبر الواتساب">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- الفوتر -->
     <footer>
