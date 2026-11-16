@@ -15,7 +15,7 @@
       "name": "مؤسسة الجودة والفن للمقاولات العامة - تفصيل مغاسل رخام",
       "image": "Hh1.webp",
       "@id": "https://maps.app.goo.gl/PMJ3V7kbL9jRouLH9?g_st=ac",
-      "url": "",
+      "url": "https://maps.app.goo.gl/PMJ3V7kbL9jRouLH9?g_st=ac",
       "telephone": "+966563645006",
       "address": {
         "@type": "PostalAddress",
@@ -219,6 +219,18 @@
             display: inline-block; 
             margin: 10px; 
         }
+        .btn-map { 
+            background: #4cc9f0; 
+            color: #0b132b; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 30px; 
+            font-size: 18px; 
+            display: inline-block; 
+            margin: 10px; 
+            box-shadow: 0 4px 10px rgba(76,201,240,0.3); 
+        }
 
         /* الأزرار العائمة (أكبر وأضخم حجماً) */
         .floating-btn {
@@ -251,7 +263,13 @@
             animation: shake 3s infinite ease-in-out;
         }
 
-        /* زر اتصال عائم - يسار (باللون الأخضر نفس الواتساب) */
+        /* زر الخريطة العائم - في المنتصف بين الاتصال والواتساب */
+        .float-map {
+            right: 100px;
+            background-color: #4cc9f0;
+        }
+
+        /* زر اتصال عائم - يسار */
         .float-phone {
             left: 20px;
             background-color: #25D366;
@@ -286,6 +304,9 @@
             .floating-btn svg {
                 width: 33px;
                 height: 33px;
+            }
+            .float-map {
+                right: 90px;
             }
         }
     </style>
@@ -378,6 +399,7 @@
     <div class="cta-box">
         <a href="tel:0563645006" class="btn-call">📞 اتصل الآن: 0563645006</a>
         <a href="https://wa.me/966563645006" class="btn-whatsapp">💬 واتساب مباشر</a>
+        <a href="https://maps.app.goo.gl/PMJ3V7kbL9jRouLH9?g_st=ac" target="_blank" class="btn-map">📍 زيارة النشاط التجاري (الخريطة)</a>
     </div>
 </div>
 
@@ -388,7 +410,14 @@
     </svg>
 </a>
 
-<!-- زر اتصال عائم - يسار (أكبر حجماً وباللون الأخضر نفس الواتساب) -->
+<!-- زر الخريطة العائم - في المنتصف -->
+<a href="https://maps.app.goo.gl/PMJ3V7kbL9jRouLH9?g_st=ac" class="floating-btn float-map" target="_blank" aria-label="زيارة النشاط التجاري على الخريطة">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+    </svg>
+</a>
+
+<!-- زر اتصال عائم - يسار -->
 <a href="tel:0563645006" class="floating-btn float-phone" aria-label="اتصل بنا الآن">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path d="M164.9 24c-12.3 0-23.7 6.6-30 17.3l-48 80c-6.6 11-6 24.8 1.5 35.2l70.1 98.1c-13.2 19.8-28.9 38-46.8 54.3-17.3 15.7-36.4 29.5-56.9 41.1l-92.4-71.8c-10.6-8.2-25.1-9-36.5-2.1l-80 48C17.3 329.8 10 341.8 10 355c0 102.6 83.2 185.8 185.8 185.8 12.1 0 24.2-.8 36.3-2.4 140.7-18.6 250.9-128.8 269.5-269.5 1.6-12.1 2.4-24.2 2.4-36.3C504 129.2 420.8 46 318.2 46c-13.2 0-25.2 7.3-30.9 19.1l-48 80c-6.9 11.4-6.1 25.9 2.1 36.5l71.8 92.4c-11.6 20.5-25.4 39.6-41.1 56.9-16.3 17.9-34.5 33.6-54.3 46.8l-98.1-70.1c-10.4-7.5-24.2-8.1-35.2-1.5l-80 48C21.4 353.4 14.8 364.8 14.8 377.1z"/>
